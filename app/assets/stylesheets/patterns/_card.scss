@@ -1,0 +1,18 @@
+@import "base/base";
+
+.card {
+  border: none;
+  box-shadow: $box-shadow;
+  margin-bottom: 1rem;
+}
+
+.card-header {
+  background-color: $white;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+
+  .card-title {
+    font-size: 1rem;
+    margin: 0;
+  }
+}

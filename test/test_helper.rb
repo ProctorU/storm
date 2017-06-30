@@ -5,3 +5,7 @@ require 'minitest/rails/capybara'
 class ActiveSupport::TestCase
   include FactoryGirl::Syntax::Methods
 end
+
+class ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+end

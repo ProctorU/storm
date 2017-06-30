@@ -1,0 +1,31 @@
+@import "base/base";
+
+.auth {
+  margin: 100px auto 0;
+  width: 500px;
+
+  @media (max-width: 520px) {
+    margin-top: $spacer-y;
+    width: 100%;
+  }
+
+  &.auth-wide {
+    width: 600px;
+
+    @media (max-width: 620px) {
+      width: 100%;
+    }
+  }
+
+  .auth-logo {
+    width: 50px;
+  }
+
+  .auth-title {
+    font-size: 1.5rem;
+  }
+}
+
+.logged-out .auth-title {
+  color: $white;
+}

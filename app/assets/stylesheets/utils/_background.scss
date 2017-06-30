@@ -1,0 +1,11 @@
+@import "base/base";
+
+.logged-out {
+  background-color: $brand-primary-dark;
+  background-image: linear-gradient(
+    to left,
+    darken($brand-primary-dark, 5%),
+    $brand-primary-dark
+  );
+  min-height: 100vh;
+}
