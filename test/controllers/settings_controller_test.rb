@@ -11,6 +11,16 @@ class SettingsControllerTest < ActionDispatch::IntegrationTest
       get(edit_settings_url)
       assert_response(:success)
     end
+
+    test 'should post update' do
+      # Create a setting so that one exists in the DB to update
+      Setting.create(aws_key: 'testing')
+
+      assert_no_difference('Setting.count') do
+        patch(settings_url, params: { setting: { aws_key: 'test' } })
+        assert_redirected_to(root_url)
+      end
+    end
   end
 
   feature 'as as an unauthenticated user' do
