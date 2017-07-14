@@ -1,8 +1,25 @@
 <div class="row">
   <div class="col-md-12">
+    <div class="card card-block">
+      <h4 class="card-title">Settings</h4>
+
     <% if @users.any? %>
-      <div class="card-deck">
-        <%= render(@users) %>
+        <div class="table-responsive">
+
+          <table class="table table-border-around mb-0">
+            <thead>
+              <tr>
+                <th>Email</th>
+                <th>Created on</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= render(@users) %>
+            </tbody>
+          </table>
+
+        </div>
       </div>
     <% end %>
   </div>
