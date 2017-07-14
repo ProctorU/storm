@@ -3,22 +3,21 @@
     <div class="card card-block">
       <h4 class="card-title">Users</h4>
 
-      <% if @users.any? %>
-        <div class="table-responsive">
-          <table class="table table-border-around mb-0">
-            <thead>
-              <tr>
-                <th>Email</th>
-                <th>Created on</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <%= render(@users) %>
-            </tbody>
-          </table>
-        </div>
-      <% end %>
+      <div class="table-responsive">
+        <table class="table table-border-around mb-0">
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Created on</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render(@users) %>
+          </tbody>
+        </table>
+      </div>
+
     </div>
   </div>
 </div>
