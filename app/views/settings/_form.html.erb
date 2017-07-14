@@ -1,7 +1,7 @@
 <%= form_for(@setting, url: settings_path) do |f| %>
   <div class="form-group">
     <%= f.label :slack_url, "Slack URL for notifications" %>
-    <%= f.text_field :slack_url, class: "form-control" %>
+    <%= f.text_field :slack_url, autofocus: true, class: "form-control" %>
 
     <p class="form-text text-muted">
       Instructions for finding your Slack URL can be found
@@ -20,7 +20,7 @@
 
   <div class="form-group">
     <%= f.label :aws_key, "AWS Key" %>
-    <%= f.text_field :aws_key, autofocus: true, class: "form-control" %>
+    <%= f.text_field :aws_key, class: "form-control" %>
   </div>
 
   <div class="form-group">
