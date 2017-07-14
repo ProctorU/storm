@@ -7,7 +7,15 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/ruby:2.4.1-node-browsers
+        environment:
+          PGHOST: 127.0.0.1
+          PGUSER: storm
+          RAILS_ENV: test
       - image: circleci/postgres:9.4
+        environment:
+          POSTGRES_USER: storm
+          POSTGRES_DB: storm_test
+          POSTGRES_PASSWORD: ""
 
     working_directory: ~/storm
 
@@ -32,15 +40,14 @@ jobs:
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
 
       # Database setup
-      - run: bundle exec rake db:create
-      - run: bundle exec rake db:schema:load
+      - run: bundle exec rails db:create
+      - run: bundle exec rails db:schema:load
 
       # run tests!
       - run:
           name: run tests
           command: |
             mkdir /tmp/test-results
-            TEST_FILES="$(circleci tests glob "test/**/*_test.rb" | circleci tests split --split-by=timings)"
 
             bundle exec rails test
 
