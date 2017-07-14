@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/index'
-
   devise_scope :user do
     authenticated do
       root to: 'websites#index', as: :authenticated_root

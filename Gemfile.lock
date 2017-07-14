@@ -41,6 +41,8 @@ GEM
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
     arel (8.0.0)
+    attr_encrypted (3.0.3)
+      encryptor (~> 3.0.0)
     autoprefixer-rails (7.1.1.2)
       execjs
     bcrypt (3.1.11)
@@ -69,6 +71,7 @@ GEM
     devise_invitable (1.7.2)
       actionmailer (>= 4.1.0)
       devise (>= 4.0.0)
+    encryptor (3.0.0)
     erubi (1.6.1)
     execjs (2.7.0)
     factory_girl (4.8.0)
@@ -201,6 +204,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  attr_encrypted (~> 3.0)
   bootstrap (~> 4.0.0.alpha6)
   byebug
   capybara (~> 2.13)
