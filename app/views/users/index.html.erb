@@ -1,11 +1,10 @@
 <div class="row">
   <div class="col-md-12">
     <div class="card card-block">
-      <h4 class="card-title">Settings</h4>
+      <h4 class="card-title">Users</h4>
 
-    <% if @users.any? %>
+      <% if @users.any? %>
         <div class="table-responsive">
-
           <table class="table table-border-around mb-0">
             <thead>
               <tr>
@@ -18,9 +17,8 @@
               <%= render(@users) %>
             </tbody>
           </table>
-
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
