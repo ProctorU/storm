@@ -20,6 +20,7 @@ gem 'rails', '~> 5.1.1'
 gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
+gem 'slack-notifier', '~> 2.2.2'
 gem 'webpacker', '~> 2.0'
 
 group :test do
