@@ -1,0 +1,25 @@
+<%= form_for(@setting, url: settings_path) do |f| %>
+  <div class="hr-sect">AWS Configuration</div>
+
+  <div class="form-group">
+    <%= f.label :aws_key %>
+    <%= f.text_field :aws_key, autofocus: true, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :aws_secret %>
+    <%= f.text_field :aws_secret, class: "form-control" %>
+  </div>
+
+  <div class="hr-sect">Slack Notifications</div>
+
+  <div class="form-group">
+    <%= f.label :slack_url %>
+    <%= f.text_field :slack_url, class: "form-control" %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.submit "Update Settings", class: "btn btn-primary btn-block" %>
+  </div>
+<% end %>

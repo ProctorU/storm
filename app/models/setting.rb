@@ -10,6 +10,8 @@ class Setting < ApplicationRecord
 
   before_create :validate_only_one_setting_record
 
+  validates_presence_of :aws_key
+
   private
 
   def validate_only_one_setting_record
