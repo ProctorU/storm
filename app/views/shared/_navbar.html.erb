@@ -2,6 +2,10 @@
   <ul class="navbar-nav">
     <%= nav_link("Websites", root_path) %>
     <%= nav_link("Stats", "#") %>
-    <%= nav_link("Accounts", "#") %>
+    <%= nav_link("Settings", settings_path) %>
+    <%= nav_link("Users", users_path) %>
+    <% if user_signed_in? %>
+      <%= nav_link("Sign Out", destroy_user_session_path, method: :delete) %>
+    <% end %>
   </ul>
 </nav>
