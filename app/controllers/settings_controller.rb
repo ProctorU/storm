@@ -26,6 +26,6 @@ class SettingsController < ApplicationController
   end
 
   def create_settings
-    SettingsCreator.execute if Setting.count == 0
+    SettingsCreator.execute if Setting.count.zero?
   end
 end
