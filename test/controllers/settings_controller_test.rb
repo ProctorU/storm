@@ -12,7 +12,7 @@ class SettingsControllerTest < ActionDispatch::IntegrationTest
       assert_response(:success)
     end
 
-    test 'should post update' do
+    test 'should patch update' do
       # Create a setting so that one exists in the DB to update
       Setting.create(aws_key: 'testing')
 
