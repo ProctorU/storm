@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/attr-encrypted/attr_encrypted.git
+  revision: e19445a9ae38ed9a55608d28a80e32126f30efd1
+  specs:
+    attr_encrypted (3.0.3)
+      encryptor (~> 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -69,6 +76,7 @@ GEM
     devise_invitable (1.7.2)
       actionmailer (>= 4.1.0)
       devise (>= 4.0.0)
+    encryptor (3.0.0)
     erubi (1.6.1)
     execjs (2.7.0)
     factory_girl (4.8.0)
@@ -203,6 +211,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  attr_encrypted (~> 3.0)!
   bootstrap (~> 4.0.0.alpha6)
   byebug
   capybara (~> 2.13)

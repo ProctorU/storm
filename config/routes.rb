@@ -16,5 +16,7 @@ Rails.application.routes.draw do
     sign_up: 'sign-up'
   }
 
+  resource(:settings, only: %w(edit update))
+  resources(:users, only: %w(index))
   resources(:websites, only: %w(new create))
 end

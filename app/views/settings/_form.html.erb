@@ -1,0 +1,39 @@
+<%= form_for(@setting, url: settings_path) do |f| %>
+  <div class="form-group">
+    <%= f.label :slack_url, "Slack URL for notifications" %>
+    <%= f.text_field :slack_url, autofocus: true, class: "form-control" %>
+
+    <p class="form-text text-muted">
+      Instructions for finding your Slack URL can be found
+      <%= link_to "here",
+        "https://slack.com/apps/A0F7XDUAZ-incoming-webhooks",
+        target: :blank %>.
+    </p>
+  </div>
+
+  <div class="hr-sect">AWS Configuration</div>
+
+  <small class="d-block mb-3 text-muted">
+    Althought completely optional, configuring Storm with AWS will give
+    you the ability to reboot servers from Slack.
+  </small>
+
+  <div class="form-group">
+    <%= f.label :aws_key, "AWS Key" %>
+    <%= f.text_field :aws_key, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :aws_secret, "AWS Secret" %>
+    <%= f.text_field :aws_secret, class: "form-control" %>
+
+    <p class="form-text text-muted">
+      Instructions for finding your AWS Key and Secret can be found
+      <%= link_to "here", "#" %>.
+    </p>
+  </div>
+
+  <div class="form-group mb-0">
+    <%= f.submit "Update Settings", class: "btn btn-primary btn-block" %>
+  </div>
+<% end %>
