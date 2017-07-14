@@ -12,4 +12,10 @@ class SettingTest < ActiveSupport::TestCase
     assert(setting.save)
     assert_not_nil(setting.encrypted_aws_secret)
   end
+
+  test 'global' do
+    assert_nil(Setting.global)
+    setting = create(:setting)
+    assert_equal(setting, Setting.global)
+  end
 end

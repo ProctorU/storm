@@ -5,7 +5,7 @@ module Notifiers
     def initialize(message, bot = nil)
       @message = message
       @bot = bot
-      @notifier = Slack::Notifier.new(Setting.first.slack_url) do
+      @notifier = Slack::Notifier.new(Setting.global.slack_url) do
         defaults username: @bot_name
       end
     end
