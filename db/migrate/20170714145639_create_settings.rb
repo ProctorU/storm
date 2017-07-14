@@ -9,8 +9,6 @@ class CreateSettings < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-
-    SettingsCreator.execute
   end
 
   def down
