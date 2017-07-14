@@ -1,0 +1,24 @@
+<div class="page-heading">
+  <h4 class="page-title">Instructions</h4>
+</div>
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <div class="card">
+      <div class="card-block">
+        <p>
+          You have successfully invited <code><%= @user.email %></code>. Since
+          we do not deliver emails, here is a fancy link for them.
+        </p>
+
+        <p class="text-horizontal">
+          <kbd class="text-primary text-horizontal bg-faded p-2">
+            <%= accept_user_invitation_url(
+              invitation_token: @user.invitation_token
+            ) %>
+          </kbd>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
