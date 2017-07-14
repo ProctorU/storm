@@ -1,2 +1,9 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<div class="row">
+  <div class="col-md-12">
+    <% if @users.any? %>
+      <div class="card-deck">
+        <%= render(@users) %>
+      </div>
+    <% end %>
+  </div>
+</div>
