@@ -1,0 +1,44 @@
+<div class="page-heading">
+  <h4 class="page-title">Let's add a new website</h4>
+</div>
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <div class="card">
+      <div class="card-block">
+        <%= form_for(@website) do |f| %>
+          <div class="form-group">
+            <%= f.label(:name) %>
+            <%= f.text_field(:name,
+              autofocus: true, autocomplete: :off,
+              class: "form-control") %>
+            <%= error_message_on(f.object, :name) %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label(:url, "URL") %>
+            <%= f.url_field(:url, class: "form-control") %>
+            <%= error_message_on(f.object, :url) %>
+          </div>
+
+          <div class="hr-sect">optional</div>
+
+          <div class="form-group">
+            <%= f.label(:basic_auth_username) %>
+            <%= f.text_field(:basic_auth_username, class: "form-control") %>
+            <%= error_message_on(f.object, :basic_auth_username) %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label(:basic_auth_password) %>
+            <%= f.text_field(:basic_auth_password, class: "form-control") %>
+            <%= error_message_on(f.object, :basic_auth_password) %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit class: "btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>

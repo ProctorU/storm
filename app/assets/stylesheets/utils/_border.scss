@@ -1,0 +1,41 @@
+@import "base/base";
+
+// NOTE: remove once Bootstrap 4 is officially released.
+hr {
+  background-color: $border-color;
+  border: 0;
+  clear: both;
+  display: block;
+  height: 1px;
+  width: 100%;
+}
+
+.hr-sect {
+  align-items: center;
+  color: darken($gray-lighter, 5%);
+  display: flex;
+  flex-basis: 100%;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+
+  &::before,
+  &::after {
+    background: $border-color;
+    content: "";
+    flex-grow: 1;
+    font-size: 0;
+    height: 1px;
+    line-height: 0;
+  }
+
+  &::before {
+    margin-right: 0.5rem;
+  }
+
+  &::after {
+    margin-left: 0.5rem;
+  }
+}

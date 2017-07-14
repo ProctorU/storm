@@ -1,0 +1,47 @@
+@mixin button-variant-primary($background, $color) {
+  background: linear-gradient(to right, $background, lighten($background, 5%));
+  background-color: $background;
+  color: $color;
+  font-weight: 500;
+
+  &:hover,
+  &.hover {
+    background: linear-gradient(to right, darken($background, 5%), $background);
+    box-shadow: 0 1px 1px 0 rgba($gray-dark, 0.15);
+    color: $color;
+  }
+
+  &:focus,
+  &.focus {
+    background-color: darken($background, 5%);
+    box-shadow: 0 0 0 1px $white, 0 0 0 3px rgba($background, 0.25);
+    color: $color;
+    outline: none;
+  }
+
+  &:active,
+  &.active {
+    background-color: darken($background, 5%);
+    box-shadow: 0 0 0 1px $white,
+                0 0 0 3px rgba($background, 0.25),
+                inset 0 1px 3px 0 rgba($gray-dark, 0.5);
+    color: $color;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: darken($background, 5%);
+      box-shadow: 0 0 0 1px $white,
+                  0 0 0 3px rgba($background, 0.25),
+                  inset 0 1px 3px 0 rgba($gray-dark, 0.5);
+      color: $color;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+    pointer-events: none;
+  }
+}

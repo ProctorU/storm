@@ -1,0 +1,16 @@
+@import "base/base";
+
+.blankslate {
+  padding: ($spacer * 2);
+  position: relative;
+  text-align: center;
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.blankslate-title {
+  font-size: 1.25rem;
+  margin-bottom: $spacer;
+}

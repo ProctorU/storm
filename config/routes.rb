@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_scope :user do
     authenticated do
-      # root to: 'organizations#index', as: :authenticated_root
+      root to: 'websites#index', as: :authenticated_root
     end
   end
 
@@ -15,4 +15,6 @@ Rails.application.routes.draw do
     sign_out: 'sign-out',
     sign_up: 'sign-up'
   }
+
+  resources(:websites, only: %w(new create))
 end

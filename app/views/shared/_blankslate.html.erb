@@ -1,0 +1,11 @@
+<div class="blankslate">
+  <h4 class="blankslate-title">
+    No <%= resource.titleize.pluralize %> have been created yet.
+  </h4>
+
+  <% if yield.present? %>
+    <div class="mt-4">
+      <%= yield %>
+    </div>
+  <% end %>
+</div>

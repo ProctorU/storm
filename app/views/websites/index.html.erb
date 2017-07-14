@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-12">
+    <% if @websites.any? %>
+      <div class="card-deck">
+        <%= render(@websites) %>
+      </div>
+    <% else %>
+      <%= render("shared/blankslate", resource: "website") do %>
+        <%= link_to("Add website", new_website_path, class: "btn btn-primary") %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

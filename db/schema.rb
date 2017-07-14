@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170630193516) do
+ActiveRecord::Schema.define(version: 20170630210637) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "pings", force: :cascade do |t|
+    t.bigint "website_id"
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["website_id"], name: "index_pings_on_website_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -51,4 +59,19 @@ ActiveRecord::Schema.define(version: 20170630193516) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  create_table "websites", force: :cascade do |t|
+    t.string "name", default: "", null: false
+    t.string "url", default: "", null: false
+    t.boolean "ssl", default: false
+    t.boolean "active", default: true
+    t.string "basic_auth_username"
+    t.string "basic_auth_password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["active"], name: "index_websites_on_active"
+    t.index ["name"], name: "index_websites_on_name"
+    t.index ["url"], name: "index_websites_on_url"
+  end
+
+  add_foreign_key "pings", "websites"
 end
