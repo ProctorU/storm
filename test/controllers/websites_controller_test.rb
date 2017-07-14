@@ -35,7 +35,7 @@ class WebsitesControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  feature 'as an authenticated user' do
+  feature 'as an unauthenticated user' do
     test 'should not get index' do
       assert_raise do
         get('/websites')
