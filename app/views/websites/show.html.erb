@@ -7,8 +7,8 @@
     <%= link_to(website_charts_response_time_index_path(@website),
       class: "card card-link") do %>
       <div class="card-block text-muted text-center d-flex align-items-center justify-content-center">
-        <%= image_tag("icons/bar-chart.svg", class: "mr-3") %>
-        <h6 class="mb-0">Response Times</h6>
+        <i class="mr-3" data-feather="bar-chart"></i>
+        <h6 class="mb-0"><%= t('.response_times') %></h6>
       </div>
     <% end %>
   </div>
@@ -16,8 +16,8 @@
     <%= link_to(edit_website_path(@website),
       class: "card card-link") do %>
       <div class="card-block text-muted text-center d-flex align-items-center justify-content-center">
-        <%= image_tag("icons/edit.svg", class: "mr-3") %>
-        <h6 class="mb-0">Edit</h6>
+        <i class="mr-3" data-feather="edit"></i>
+        <h6 class="mb-0"><%= t('.edit') %></h6>
       </div>
     <% end %>
   </div>
@@ -34,7 +34,7 @@
         <%= paginate(@pings) %>
       </div>
     <% else %>
-      <%= render("shared/blankslate", resource: "ping") %>
+      <%= render("shared/blankslate", resource: t('.resource')) %>
     <% end %>
   </div>
 </div>

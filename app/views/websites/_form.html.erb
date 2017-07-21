@@ -1,0 +1,53 @@
+<%= form_for(website) do |f| %>
+  <div class="form-group">
+    <%= f.label(:name) %>
+    <%= f.text_field(:name,
+      autofocus: true, autocomplete: :off,
+      class: "form-control") %>
+    <%= error_message_on(f.object, :name) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label(:url, t('.url')) %>
+    <%= f.url_field(:url, class: "form-control") %>
+    <%= error_message_on(f.object, :url) %>
+  </div>
+
+  <div class="hr-sect"><%= t('.optional') %></div>
+
+  <div class="form-group">
+    <%= f.label(:basic_auth_username) %>
+    <%= f.text_field(:basic_auth_username, class: "form-control") %>
+    <%= error_message_on(f.object, :basic_auth_username) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label(:basic_auth_password) %>
+    <%= f.text_field(:basic_auth_password, class: "form-control") %>
+    <%= error_message_on(f.object, :basic_auth_password) %>
+  </div>
+
+  <% if (Setting.global.present? &&
+      (Setting.global.aws_key.present? && Setting.global.aws_secret.present?)) %>
+    <div class="hr-sect"><%= t('.aws_info') %></div>
+
+    <div class="form-group">
+      <%= f.label(:aws_instance_id, t('.aws_instance_id')) %>
+      <%= f.text_field(:aws_instance_id, class: "form-control") %>
+      <%= error_message_on(f.object, :aws_instance_id) %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label(:aws_region, t('.aws_region')) %>
+      <%= f.select(:aws_region,
+        options_for_aws_region(f.object.aws_region),
+         { prompt: t('.aws_region_select') },
+         { class: "form-control" }) %>
+      <%= error_message_on(f.object, :aws_region) %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,3 +1,19 @@
+<div class="page-heading">
+  <h4 class="page-title"><%= t('.title') %></h4>
+</div>
+
+<div class="row">
+  <div class="col-sm-4 offset-sm-4">
+    <%= link_to(new_website_path,
+      class: "card card-link") do %>
+      <div class="card-block text-muted text-center d-flex align-items-center justify-content-center">
+        <i class="mr-3" data-feather="link-2"></i>
+        <h6 class="mb-0"><%= t('.add') %></h6>
+      </div>
+    <% end %>
+  </div>
+</div>
+
 <div class="row">
   <div class="col-md-12">
     <% if @websites.any? %>
@@ -13,9 +29,7 @@
         </div>
       </div>
     <% else %>
-      <%= render("shared/blankslate", resource: "website") do %>
-        <%= link_to("Add website", new_website_path, class: "btn btn-primary") %>
-      <% end %>
+      <%= render("shared/blankslate", resource: t('.resource')) %>
     <% end %>
   </div>
 </div>

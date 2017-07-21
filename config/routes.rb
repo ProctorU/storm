@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   resource(:settings, only: %w(edit update))
   resources(:users, only: %w(index))
-  resources(:websites, only: %w(index new create show edit)) do
+  resources(:websites, only: %w(index new create show edit update)) do
     scope(module: :websites) do
       namespace(:charts) do
         resources(:response_time, only: %w(index), path: 'response-time')

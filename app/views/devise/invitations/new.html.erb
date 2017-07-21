@@ -1,8 +1,17 @@
 <div class="page-heading">
   <h4 class="page-title"><%= t "devise.invitations.new.header" %></h4>
+</div>
 
-  <%= link_to("Head back", users_path,
-    class: "btn btn-secondary btn-sm mt-3") %>
+<div class="row">
+  <div class="col-sm-4 offset-sm-4">
+    <%= link_to(users_path,
+      class: "card card-link") do %>
+      <div class="card-block text-muted text-center d-flex align-items-center justify-content-center">
+        <i class="mr-3" data-feather="arrow-left"></i>
+        <h6 class="mb-0">Head back</h6>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <div class="row">

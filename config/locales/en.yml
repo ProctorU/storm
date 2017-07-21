@@ -30,13 +30,48 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  pagination:
+    fetching: Fetching...
+    failed: Failed to load next page of results
+  shared:
+    blankslate:
+      title: No %{resource} have been created yet.
+  websites:
+    charts:
+      response_time:
+        index:
+          title: Response Times
+    create:
+      success: >
+        %{name} has been successfully added.
+    edit:
+      title: Let's edit your website
+    form:
+      aws_info: AWS Information
+      aws_instance_id: AWS Instance ID
+      aws_region: AWS Region
+      aws_region_select: Select a region
+      optional: Optional
+      url: URL
+    index:
+      add: Add website
+      resource: website
+      title: Our websites
+    new:
+      back: Back to websites
+      title: Let's add a new website
+    next_page:
+      load_more: Load more
+    show:
+      edit: Edit
+      response_times: Response Times
+      resource: ping
+    update:
+      success: >
+        %{name} has been successfully updated.
   users:
     registrations:
       new:
         disable_registration: >
           If you already have an account, please sign in. Otherwise, you
           must be invited to join Storm.
-  websites:
-    create:
-      success: >
-        %{name} has been successfully added.

@@ -5,6 +5,7 @@ class WebsitesControllerTest < ActionDispatch::IntegrationTest
   feature 'as as authenticated user' do
     before(:each) do
       @user = create(:user)
+      @website = create(:website)
       sign_in(@user)
     end
 
@@ -16,6 +17,19 @@ class WebsitesControllerTest < ActionDispatch::IntegrationTest
     test 'should get new' do
       get(new_website_path)
       assert_response(:success)
+    end
+
+    test 'should get edit' do
+      get(edit_website_path(@website))
+      assert_response(:success)
+    end
+
+    test 'should patch update' do
+      assert_no_difference('Website.count') do
+        patch(website_path(@website), params: params)
+        assert_not_nil(flash[:success])
+        assert_redirected_to(root_path)
+      end
     end
 
     test 'should post create' do

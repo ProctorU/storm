@@ -31,11 +31,27 @@ class WebsitesController < ApplicationController
     @pings = @website.pings.paginate(params).decorate
   end
 
+  def edit
+    @website = Website.find(params[:id])
+  end
+
+  def update
+    @website = Website.find(params[:id])
+
+    if @website.update(website_params)
+      flash[:success] = t('.success', name: @website.name)
+      redirect_to(root_path)
+    else
+      render(:edit)
+    end
+  end
+
   private
 
   def website_params
     params.require(:website).permit(
-      :name, :url, :basic_auth_username, :basic_auth_password
+      :name, :url, :basic_auth_username, :basic_auth_password,
+      :aws_instance_id, :aws_region
     )
   end
 end

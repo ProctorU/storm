@@ -1,7 +1,7 @@
 module Paginatable
   extend ActiveSupport::Concern
 
-  SIZE = 12
+  SIZE = 18
 
   module ClassMethods
     def paginate(params)

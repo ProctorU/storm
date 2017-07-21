@@ -1,6 +1,5 @@
 import 'whatwg-fetch';
 
-const loadMoreSelector = '[data-behavior="load-more"]';
 const paginationWrapperSelector = '[data-behavior="pagination-wrapper"]';
 
 export default class Pagination {
@@ -55,7 +54,8 @@ export default class Pagination {
 
   addLoadingText(el) {
     this.cachedText = el.textContent;
-    el.textContent = 'Fetching...';
+
+    el.textContent = polyglot.t('pagination.fetching');
     el.setAttribute('disabled', true);
   }
 
@@ -78,7 +78,7 @@ export default class Pagination {
         this.paginationWrapperEl.innerHTML = response.link;
       })
       .catch(ex => {
-        console.log('Failed to load next page of results', ex);
+        console.log(polyglot.t('pagination.failed'), ex);
       });
   }
 }
