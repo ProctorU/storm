@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20170630210637) do
   create_table "pings", force: :cascade do |t|
     t.bigint "website_id"
     t.integer "status"
+    t.integer "retry_count"
+    t.integer "response_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["website_id"], name: "index_pings_on_website_id"

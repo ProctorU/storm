@@ -2,43 +2,43 @@ require 'net/http'
 
 class Pinger
   attr_reader :website
+  attr_reader :retry_attempt
 
-  def initialize(website)
+  def initialize(website, retry_attempt = false)
     @website = website
+    @retry_attempt = retry_attempt
   end
 
   def ping
-    puts "************"
-    create_ping
+    unless retry_attempt
+      create_ping
+    else
+      retry_ping
+    end
   end
 
   private
 
   def create_ping
-    #website.pings.create(status: execute)
-    website.pings.create(status: website_running?)
+    ping = website.pings.create(get_response(website.url))
+    return if ping.status == 1
+
+    ping.update_columns(retry_count: 1)
+    PingerJob.set(wait: 5.seconds).perform_later(website, true)
   end
 
-  def website_running?
-    # try to ping, on failure retry n times at n interval
-    #return 1
-    request_success?(website.url) ? 1 : 0
-  rescue
-    retries = 3
-    delay = 5
-    retries.times do
-      if request_success?(website.url)
-        return 1
-      else
-        puts "************** sleeping"
-        sleep delay
-      end
-    end
-  end
+  def retry_ping
+    ping = website.pings.last
+    return if ping.retry_count == 2
+
+    ping.update_columns(get_response(website.url))
+    return if ping.status == 1
+
+    ping.update_columns(retry_count: 2)
+    PingerJob.set(wait: 10.seconds).perform_later(website, true)
   end
 
-  def request_success?(url)
-    puts "******** making request"
+  def get_response(url)
     uri = URI(url)
 
     Net::HTTP.start(
@@ -56,19 +56,19 @@ class Pinger
         )
       end
 
+      start_time = Time.current
       response = http.request(request)
+      response_time = (Time.current - start_time).in_milliseconds.to_i
 
       if response.kind_of?(Net::HTTPRedirection)
-        request_success?(response['location'])
+        # recurse
+        get_response(response['location'])
       else
-        return ! %W(4 5).include?(response.code[0])
+        success = ! %W(4 5).include?(response.code[0])
+        return {response_time: response_time, status: success ? 1 : 0}
       end
     end
-  end
-
-  def retry_ping
-  end
-
-  def enqueue_next_ping
+  rescue
+    {status: 0}
   end
 end
