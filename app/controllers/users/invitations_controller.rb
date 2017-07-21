@@ -9,7 +9,6 @@ module Users
       # find all users, including unscoped (deleted).
       @user = User.unscoped.find_by(email: invite_params[:email])
 
-
       # only re-invite if user has been deleted.
       if @user && @user.deleted? && @user.email != current_user.email
         @user.assign_attributes(
