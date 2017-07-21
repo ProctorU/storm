@@ -10,11 +10,9 @@ class SettingsController < ApplicationController
     @setting = Setting.first
 
     if @setting.update(setting_params)
-      flash[:notice] = 'Your settings have been updated.'
-      redirect_to root_path
+      flash[:success] = 'Your settings have been updated.'
+      redirect_to edit_settings_path
     else
-      flash[:alert] = 'Something went wrong updating settings.
-        Please check and try again'
       render :edit
     end
   end

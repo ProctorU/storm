@@ -1,5 +1,16 @@
 @import "base/base";
 
+.table {
+  td {
+    vertical-align: middle;
+  }
+
+  .td-actions {
+    text-align: right;
+    white-space: nowrap;
+  }
+}
+
 .table-border-around {
   border: 1px solid $table-border-color;
 }

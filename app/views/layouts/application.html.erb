@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="<%= body_classes %>">
+  <body class="<%= body_classes %>" data-page="<%= body_data_page %>">
     <%= render("shared/navbar") %>
     <%= render("shared/flash") %>
 

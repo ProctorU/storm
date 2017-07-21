@@ -2,6 +2,7 @@
   <div class="form-group">
     <%= f.label :slack_url, "Slack URL for notifications" %>
     <%= f.text_field :slack_url, autofocus: true, class: "form-control" %>
+    <%= error_message_on(f.object, :slack_url) %>
 
     <p class="form-text text-muted">
       Instructions for finding your Slack URL can be found
@@ -21,11 +22,13 @@
   <div class="form-group">
     <%= f.label :aws_key, "AWS Key" %>
     <%= f.text_field :aws_key, class: "form-control" %>
+    <%= error_message_on(f.object, :aws_key) %>
   </div>
 
   <div class="form-group">
     <%= f.label :aws_secret, "AWS Secret" %>
     <%= f.text_field :aws_secret, class: "form-control" %>
+    <%= error_message_on(f.object, :aws_secret) %>
 
     <p class="form-text text-muted">
       Instructions for finding your AWS Key and Secret can be found
