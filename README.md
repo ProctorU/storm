@@ -28,7 +28,7 @@ within Slack, and many more useful features.
 
 ## Deploy to Heroku
 
-- [ ] TODO: add "Deploy to Heroku" button.
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Developing
 
