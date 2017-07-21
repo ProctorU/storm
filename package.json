@@ -2,6 +2,6 @@
   "name": "storm",
   "private": true,
   "dependencies": {
-    "clipboard-js": "^0.3.5"
+    "clipboard": "^1.7.1"
   }
 }

@@ -1,6 +1,11 @@
 <tr>
   <td><%= user.email %></td>
-  <td><%= user.created_at %></td>
-  <td class="td-actions">
+
+  <td><%= local_time(user.created_at, '%B %e, %Y at %l:%M%P') %></td>
+
+  <td>
+    <span class="badge badge-<%= user.pending? ? 'default' : 'success' %>">
+      <%= user.pending? ? 'pending' : 'member' %>
+    </span>
   </td>
 </tr>
