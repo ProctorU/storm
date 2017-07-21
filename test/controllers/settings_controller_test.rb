@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class SettingsControllerTest < ActionDispatch::IntegrationTest
-  feature 'as as authenticated user' do
+  feature 'as an authenticated user' do
     before(:each) do
       @user = create(:user)
       sign_in(@user)
@@ -18,12 +18,12 @@ class SettingsControllerTest < ActionDispatch::IntegrationTest
 
       assert_no_difference('Setting.count') do
         patch(settings_url, params: { setting: { aws_key: 'test' } })
-        assert_redirected_to(root_url)
+        assert_redirected_to(edit_settings_url)
       end
     end
   end
 
-  feature 'as as an unauthenticated user' do
+  feature 'as an unauthenticated user' do
     test 'should get redirected to sign-in' do
       get(users_url)
       assert_redirected_to(new_user_session_path)

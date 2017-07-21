@@ -1,0 +1,34 @@
+<div class="page-heading">
+  <h4 class="page-title">Instructions</h4>
+</div>
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <div class="card">
+      <div class="card-block">
+        <p>
+          You have successfully invited <code><%= @user.email %></code>. Since
+          we do not deliver emails, here is a fancy link for them.
+        </p>
+
+        <div class="input-group">
+          <input type="text"
+            class="form-control"
+            value="<%= accept_user_invitation_url(
+              invitation_token: params[:token]
+            ) %>" />
+
+          <span class="input-group-btn">
+            <button class="btn btn-primary" type="button"
+              data-clipboard-text="<%= accept_user_invitation_url(
+                invitation_token: params[:token]
+              )%>"
+              data-behavior="copy-to-clipboard">
+              Copy link to clipboard
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
