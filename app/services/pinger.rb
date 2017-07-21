@@ -61,7 +61,6 @@ class Pinger
       response_time = (Time.current - start_time).in_milliseconds.to_i
 
       if response.kind_of?(Net::HTTPRedirection)
-        # recurse
         get_response(response['location'])
       else
         success = ! %W(4 5).include?(response.code[0])
