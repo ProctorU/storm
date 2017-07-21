@@ -8,6 +8,9 @@
     "RACK_ENV": {
       "value": "production"
     },
+    "NODE_ENV": {
+      "value": "production"
+    },
     "PORT": {
       "value": "3000"
     },

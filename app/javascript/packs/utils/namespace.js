@@ -7,7 +7,7 @@
 
 const slice = [].slice;
 
-namespace = function(target, name, block) {
+export function namespace(target, name, block) {
   let i, item, len, ref, ref1, top;
   if (arguments.length < 3) {
     (ref = [typeof exports !== 'undefined' ? exports : window].concat(
@@ -21,4 +21,4 @@ namespace = function(target, name, block) {
     target = target[item] || (target[item] = {});
   }
   return block(target, top);
-};
+}

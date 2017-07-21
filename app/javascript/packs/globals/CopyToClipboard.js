@@ -1,8 +1,6 @@
-//= require ../utils/namespace
-
 const selector = '[data-behavior="copy-to-clipboard"]';
 
-class CopyToClipboard {
+export default class CopyToClipboard {
   constructor() {
     this.clipboardButtons = document.querySelectorAll(selector);
     this.clipboard = null;
@@ -35,7 +33,3 @@ class CopyToClipboard {
     el.setAttribute('data-balloon-pos', 'up');
   }
 }
-
-namespace('Storm.Globals', exports => {
-  exports.CopyToClipboard = CopyToClipboard;
-});
