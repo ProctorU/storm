@@ -28,6 +28,9 @@ jobs:
             - gem-cache-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
             - gem-cache-{{ .Branch }}
             - gem-cache
+            - npm-deps-{{ .Branch }}-{{ checksum "package.json" }}
+            - npm-deps-{{ checksum "package.json" }}
+            - npm-deps
 
       - run:
           name: install dependencies
@@ -39,14 +42,31 @@ jobs:
           key: gem-cache-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
+
       - save_cache:
           key: gem-cache-{{ .Branch }}
           paths:
             - vendor/bundle
+
       - save_cache:
           key: gem-cache
           paths:
             - vendor/bundle
+
+      - save_cache:
+          key: npm-deps-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - .node_modules
+
+      - save_cache:
+          key: npm-deps-{{ checksum "package.json" }}
+          paths:
+            - .node_modules
+
+      - save_cache:
+          key: npm-deps
+          paths:
+            - .node_modules
 
       # Database setup
       - run: bundle exec rails db:create

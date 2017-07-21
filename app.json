@@ -12,10 +12,10 @@
       "value": "3000"
     },
     "RAILS_MAX_THREADS": {
-      "value": 5
+      "value": "5"
     },
     "WEB_CONCURRENCY": {
-      "value": 2
+      "value": "2"
     }
   }
 }
