@@ -1,7 +1,7 @@
 // Creates a namespaced class or method
 //
 // Example usages:
-// namespace('Archimedes.Feature', (exports) => {
+// namespace('Storm.NotifySlackBot', (exports) => {
 //   exports.Init = class Init {
 // })
 
