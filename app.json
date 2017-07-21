@@ -1,0 +1,21 @@
+{
+  "name": "Storm",
+  "description": "Self-hosted website monitoring",
+  "repository": "https://github.com/ProctorU/storm.git",
+  "logo": "https://s3-us-west-2.amazonaws.com/dev-team-resources/storm-wordmark.svg",
+  "keywords": ["monitoring", "storm", "slack", "rails"],
+  "env": {
+    "RACK_ENV": {
+      "value": "production"
+    },
+    "PORT": {
+      "value": "3000"
+    },
+    "RAILS_MAX_THREADS": {
+      "value": 5
+    },
+    "WEB_CONCURRENCY": {
+      "value": 2
+    }
+  }
+}
