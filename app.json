@@ -4,6 +4,14 @@
   "repository": "https://github.com/ProctorU/storm.git",
   "logo": "https://s3-us-west-2.amazonaws.com/dev-team-resources/storm-wordmark.svg",
   "keywords": ["monitoring", "storm", "slack", "rails"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
   "env": {
     "RACK_ENV": {
       "value": "production"
