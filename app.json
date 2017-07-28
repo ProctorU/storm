@@ -28,5 +28,8 @@
     "WEB_CONCURRENCY": {
       "value": "2"
     }
+  },
+  "scripts": {
+    "postdeploy": "bundle exec rails db:migrate"
   }
 }
