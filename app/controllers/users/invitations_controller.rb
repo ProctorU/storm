@@ -1,8 +1,6 @@
 module Users
   # InvitationsController
   class InvitationsController < Devise::InvitationsController
-    layout('application')
-
     private
 
     def invite_resource(&block)

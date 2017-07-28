@@ -9,7 +9,11 @@ class ApplicationController < ActionController::Base
   private
 
   def by_resource
-    devise_controller? ? 'unauthenticated' : 'application'
+    guest? ? 'unauthenticated' : 'application'
+  end
+
+  def guest?
+    devise_controller? && !user_signed_in?
   end
 
   def configure_permitted_parameters
