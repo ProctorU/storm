@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :website do
     sequence(:name) { |n| "Website #{n}" }
-    sequence(:url) { |n| "https://#{n}.proctoru.com" }
-    ssl(true)
+    sequence(:url) { |n| "http://#{n}.proctoru.com" }
+    ssl(false)
     active(true)
 
     trait(:with_basic_auth) do
