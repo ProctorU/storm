@@ -3,6 +3,7 @@ require 'net/http'
 class Pinger
   attr_reader :website
   attr_reader :retry_attempt
+  alias_method :retry_attempt?, :retry_attempt
 
   def initialize(website, retry_attempt = false)
     @website = website
@@ -10,11 +11,7 @@ class Pinger
   end
 
   def ping
-    unless retry_attempt
-      create_ping
-    else
-      retry_ping
-    end
+    retry_attempt? ? retry_ping : create_ping
   end
 
   private
