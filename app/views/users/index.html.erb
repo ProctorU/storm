@@ -1,0 +1,29 @@
+<div class="page-heading">
+  <h4 class="page-title">Here's your team</h4>
+
+  <%= link_to("Invite member", new_user_invitation_path,
+    class: "btn btn-primary btn-sm mt-3") %>
+</div>
+
+<div class="row">
+  <div class="col-md-8 offset-md-2">
+    <div class="card">
+      <div class="card-block">
+        <div class="table-responsive">
+          <table class="table table-border-around mb-0">
+            <thead>
+              <tr>
+                <th>Email</th>
+                <th>Created on</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= render(@users) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

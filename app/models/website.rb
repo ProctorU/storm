@@ -1,5 +1,6 @@
 class Website < ApplicationRecord
   VALID_URL_REGEX = /\A#{URI::regexp(['http', 'https'])}\z/
+  acts_as_paranoid
 
   has_many :pings, dependent: :destroy
 

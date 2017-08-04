@@ -1,8 +1,11 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  acts_as_paranoid
+
   devise(
     :invitable, :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
   )
+
+  # alias the Devise Invitable method to check if a user is pending creation.
+  alias_method(:pending?, :valid_invitation?)
 end

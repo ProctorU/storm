@@ -1,0 +1,25 @@
+@import "base/base";
+
+.welcome {
+  .welcome-logo {
+    width: 125px;
+  }
+
+  .welcome-title {
+    color: $white;
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  .welcome-subtitle {
+    color: darken($white, 20%);
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+
+  .welcome-slack-message {
+    display: block;
+    margin-bottom: 15px;
+    width: 400px;
+  }
+}

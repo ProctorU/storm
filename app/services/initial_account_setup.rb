@@ -1,5 +1,5 @@
-# AppSetup
-class AppSetup
+# InitialAccountSetup
+class InitialAccountSetup
   attr_reader(:current_user, :current_path)
 
   def initialize(current_user, current_path)
