@@ -1,1 +1,42 @@
 <%= render("shared/flash") %>
+
+<div class="container mh-100 welcome">
+  <div class="row mh-100">
+    <div class="col-md-6 mh-md-100 mh-50">
+      <div class="d-flex align-items-center justify-content-center mh-md-100 mh-50">
+        <div class="d-block text-center">
+          <%= image_tag("bolt.png", class: "welcome-logo mb-3") %>
+
+          <h1 class="welcome-title">Storm</h1>
+          <h4 class="welcome-subtitle mb-4">
+            Self-hosted, open-source <br /> website monitoring
+          </h4>
+
+          <div class="mb-3">
+            <%= link_to("Source code", "https://github.com/ProctorU/storm",
+              class: "btn btn-secondary") %>
+
+            <a href="https://heroku.com/deploy?template=https://github.com/ProctorU/storm"
+              class="btn btn-primary">
+              Deploy to Heroku
+            </a>
+          </div>
+
+          <div>
+            <%= link_to("Sign in", new_user_session_path,
+              class: "btn btn-outline-secondary btn-block") %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 d-flex align-items-center justify-content-center mh-md-100 mh-50">
+      <div>
+        <%= image_tag("welcome/message-one.png", class: "welcome-slack-message") %>
+        <%= image_tag("welcome/message-two.png", class: "welcome-slack-message") %>
+        <%= image_tag("welcome/message-three.png", class: "welcome-slack-message") %>
+        <%= image_tag("welcome/message-four.png", class: "welcome-slack-message") %>
+      </div>
+    </div>
+  </div>
+</div>
