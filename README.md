@@ -45,7 +45,7 @@ within Slack, and many more useful features.
 
 ## Credits
 
-Squint is maintained and funded by [ProctorU](https://twitter.com/ProctorU).
+Storm is maintained and funded by [ProctorU](https://twitter.com/ProctorU).
 
 <br>
 
