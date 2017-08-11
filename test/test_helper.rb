@@ -4,6 +4,8 @@ require 'minitest/rails/capybara'
 
 class ActiveSupport::TestCase
   include FactoryGirl::Syntax::Methods
+
+  Delayed::Worker.delay_jobs = false
 end
 
 class ActionDispatch::IntegrationTest

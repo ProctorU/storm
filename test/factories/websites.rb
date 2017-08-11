@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :website do
     sequence(:name) { |n| "Website #{n}" }
-    sequence(:url) { |n| "https://#{n}.proctoru.com" }
-    ssl(true)
+    sequence(:url) { |n| "http://#{n}.proctoru.com" }
+    ssl(false)
     active(true)
 
     trait(:with_basic_auth) do
@@ -12,6 +12,20 @@ FactoryGirl.define do
 
     trait(:inactive) do
       active(false)
+    end
+
+    factory :website_with_ping do
+      trait(:success) do
+        after(:create) do |website|
+          create(:ping, :success, website: website)
+        end
+      end
+
+      trait(:fail) do
+        after(:create) do |website|
+          create(:ping, :fail, website: website)
+        end
+      end
     end
   end
 end

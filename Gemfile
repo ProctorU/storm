@@ -7,6 +7,7 @@ end
 
 gem 'attr_encrypted', '~> 3.0', github: 'attr-encrypted/attr_encrypted'
 gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'delayed_job_active_record', '~> 4.1.2'
 gem 'devise', '~> 4.3.0'
 gem 'devise_invitable', '~> 1.7', '>= 1.7.2'
 gem 'foreman'
@@ -23,6 +24,8 @@ gem 'webpacker', '~> 2.0'
 group :test do
   gem 'minitest-rails-capybara'
   gem 'minitest-ci'
+  gem 'webmock', '~> 2.1'
+  gem 'vcr', '~> 3.0', '>= 3.0.3'
 end
 
 group :development, :test do
