@@ -45,7 +45,9 @@ within Slack, and many more useful features.
 
 ## Credits
 
-Storm is maintained and funded by [ProctorU](https://twitter.com/ProctorU).
+Storm is maintained and funded by [ProctorU](https://twitter.com/ProctorU),
+a simple online proctoring service that allows you to take exams or
+certification tests at home..
 
 <br>
 
@@ -57,8 +59,4 @@ Storm is maintained and funded by [ProctorU](https://twitter.com/ProctorU).
   <h3 align="center">
     <a href="https://twitter.com/ProctorUEng">ProctorU Engineering & Design</a>
   </h3>
-
-  <p align="center">
-    A simple online proctoring service that allows you to take exams or certification tests at home.
-  </p>
 </p>
