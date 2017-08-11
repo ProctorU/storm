@@ -29,6 +29,8 @@ within Slack, and many more useful features.
 
 ## Deploy to Heroku
 
+> Be sure to enable the "worker" resource after successfully deploying.
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Developing
