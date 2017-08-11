@@ -1,3 +1,5 @@
+require('net/http')
+
 module Pings
   # Manager
   class Manager
