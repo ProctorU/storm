@@ -1,9 +1,11 @@
+# Website
 class Website < ApplicationRecord
   VALID_URL_REGEX = /\A#{URI::regexp(['http', 'https'])}\z/
 
   acts_as_paranoid
 
   has_many :pings, dependent: :destroy
+  has_many :recent_pings, -> { limit(15) }, class_name: 'Ping'
 
   validates(:name, presence: true)
   validates(:url, presence: true, format: { with: VALID_URL_REGEX })

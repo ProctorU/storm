@@ -3,7 +3,7 @@ class WebsitesController < ApplicationController
   before_action(:authenticate_user!, unless: :devise_controller?)
 
   def index
-    @websites = Website.active
+    @websites = Website.includes(:pings).active.decorate
   end
 
   def new
