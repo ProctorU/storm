@@ -47,7 +47,7 @@ within Slack, and many more useful features.
 
 Storm is maintained and funded by [ProctorU](https://twitter.com/ProctorU),
 a simple online proctoring service that allows you to take exams or
-certification tests at home..
+certification tests at home.
 
 <br>
 
