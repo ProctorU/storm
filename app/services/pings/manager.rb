@@ -17,7 +17,7 @@ module Pings
 
     def create_ping
       ping = website.pings.create(ping_attributes(website.url))
-      return ping if successful?(ping)
+      return enqueue_next_ping(ping) if successful?(ping)
 
       ping.update_column(:retry_count, 1)
       PingerJob.set(wait: 5.seconds).perform_later(website, true)
@@ -26,10 +26,10 @@ module Pings
 
     def retry_ping
       ping = website.pings.last
-      return ping if ping.retry_count == 3
+      return enqueue_next_ping(ping) if ping.retry_count == 3
 
       ping.update_columns(ping_attributes(website.url))
-      return ping if successful?(ping.reload)
+      return enqueue_next_ping(ping) if successful?(ping.reload)
 
       ping.update_column(:retry_count, ping.retry_count + 1)
       PingerJob.set(wait: 10.seconds).perform_later(website, true)
@@ -54,6 +54,11 @@ module Pings
         status: status,
         response_time: response_time
       }
+    end
+
+    def enqueue_next_ping(ping)
+      PingerJob.set(wait: 1.minute).perform_later(ping.website)
+      ping
     end
 
     def successful?(ping)
