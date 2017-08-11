@@ -9,7 +9,7 @@ module Pings
 
     feature 'successful websites' do
       let(:website) do
-        VCR.use_cassette('pings/successful/setup') do
+        VCR.use_cassette('pings/manager/successful/setup') do
           perform_enqueued_jobs do
             create(:website, url: 'http://httpstat.us/200', ssl: false)
           end
@@ -17,7 +17,7 @@ module Pings
       end
 
       it 'should create a ping' do
-        VCR.use_cassette('pings/successful/default') do
+        VCR.use_cassette('pings/manager/successful/default') do
           assert_difference -> { website.pings.size } do
             Pings::Manager.new(website).ping
           end
@@ -25,7 +25,7 @@ module Pings
       end
 
       it 'should create a ping with correct status' do
-        VCR.use_cassette('pings/successful/status') do
+        VCR.use_cassette('pings/manager/successful/status') do
           ping = Pings::Manager.new(website).ping
           assert(ping.status.eql?(1))
         end
@@ -34,7 +34,7 @@ module Pings
 
     feature 'unsuccessful websites' do
       let(:website) do
-        VCR.use_cassette('pings/unsuccessful/setup') do
+        VCR.use_cassette('pings/manager/unsuccessful/setup') do
           perform_enqueued_jobs do
             create(:website, url: 'http://httpstat.us/500', ssl: false)
           end
@@ -42,7 +42,7 @@ module Pings
       end
 
       it 'should enqueue another job if first retry' do
-        VCR.use_cassette('pings/unsuccessful/retry/one') do
+        VCR.use_cassette('pings/manager/unsuccessful/retry/one') do
           assert_enqueued_jobs(1) do
             Pings::Manager.new(website).ping
           end
@@ -50,7 +50,7 @@ module Pings
       end
 
       it 'should enqueue another job if second retry' do
-        VCR.use_cassette('pings/unsuccessful/retry/two') do
+        VCR.use_cassette('pings/manager/unsuccessful/retry/two') do
           assert_enqueued_jobs(1) do
             website.pings.last.update_column(:retry_count, 2)
             Pings::Manager.new(website, true).ping

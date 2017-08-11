@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://httpstat.us/500
+    uri: http://httpstat.us/200
     body:
       encoding: US-ASCII
       string: ''
@@ -15,15 +15,17 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 500
-      message: Internal Server Error
+      code: 200
+      message: OK
     headers:
       Cache-Control:
       - private
       Content-Length:
-      - '25'
+      - '126'
       Content-Type:
       - text/plain; charset=utf-8
+      Vary:
+      - Accept-Encoding
       Server:
       - Microsoft-IIS/8.0
       X-Aspnetmvc-Version:
@@ -37,10 +39,10 @@ http_interactions:
       Set-Cookie:
       - ARRAffinity=0505ea4e4137690e8f96d3553a708887eb1862386cab3040d9b37147aa4b2d8c;Path=/;HttpOnly;Domain=httpstat.us
       Date:
-      - Fri, 04 Aug 2017 20:53:45 GMT
+      - Fri, 11 Aug 2017 13:42:44 GMT
     body:
-      encoding: UTF-8
-      string: 500 Internal Server Error
+      encoding: ASCII-8BIT
+      string: 200 OK
     http_version: 
-  recorded_at: Fri, 04 Aug 2017 20:53:44 GMT
+  recorded_at: Fri, 11 Aug 2017 13:42:46 GMT
 recorded_with: VCR 3.0.3
