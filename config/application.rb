@@ -21,5 +21,8 @@ module Storm
     config.action_view.field_error_proc = Proc.new do |html_tag, _instance|
       html_tag
     end
+
+    # Use DelayedJob as adapter for ActiveJob.
+    config.active_job.queue_adapter = :delayed_job
   end
 end
