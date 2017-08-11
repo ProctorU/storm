@@ -36,6 +36,7 @@ within Slack, and many more useful features.
 1. Clone the repository.
 1. Install missing dependencies: `bundle install`.
 1. Setup your database: `rails db:setup`.
+1. Start your server with foreman: `foreman start -f Procfile.dev`.
 1. Make your changes in a thoughtfully-named branch.
 1. Ensure 1:1 test coverage.
 1. Submit a [Pull Request](https://github.com/ProctorU/storm/pulls)!
