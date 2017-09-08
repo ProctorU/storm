@@ -10,6 +10,10 @@ class Setting < ApplicationRecord
 
   before_create :validate_only_one_setting_record
 
+  def self.global
+    first
+  end
+
   private
 
   def validate_only_one_setting_record
