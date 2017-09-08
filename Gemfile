@@ -12,6 +12,7 @@ gem 'devise', '~> 4.3.0'
 gem 'devise_invitable', '~> 1.7', '>= 1.7.2'
 gem 'draper', '~> 3.0'
 gem 'foreman'
+gem 'kaminari', '~> 1.0', '>= 1.0.1'
 gem 'local_time', '~> 2.0'
 gem 'paranoia', '~> 2.3', '>= 2.3.1'
 gem 'pg', '~> 0.18'
@@ -34,12 +35,14 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
   gem 'factory_girl_rails', '~> 4.8'
+  gem 'faker', '~> 1.8', '>= 1.8.4'
   gem 'selenium-webdriver'
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'ruby-progressbar', '~> 1.8', '>= 1.8.1'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console', '>= 3.3.0'
 end

@@ -1,5 +1,4 @@
 class SettingsController < ApplicationController
-  before_action(:authenticate_user!)
   before_action(:create_settings, only: %w(edit))
 
   def edit

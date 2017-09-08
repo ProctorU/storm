@@ -33,17 +33,29 @@ class WebsitesControllerTest < ActionDispatch::IntegrationTest
         assert_response(:success)
       end
     end
+
+    test 'should get show' do
+      website = create(:website)
+      get(website_path(website))
+      assert_response(:success)
+    end
   end
 
   feature 'as an unauthenticated user' do
     test 'should not get index' do
-      assert_raise do
-        get('/websites')
-      end
+      get('/websites')
+      assert_redirected_to(:new_user_registration)
     end
 
     test 'should not get new' do
       get(new_website_path)
+      assert_redirected_to(:new_user_registration)
+    end
+
+    test 'should not get show' do
+      website = create(:website)
+
+      get(website_path(website))
       assert_redirected_to(:new_user_registration)
     end
   end

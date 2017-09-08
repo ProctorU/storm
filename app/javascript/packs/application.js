@@ -2,6 +2,8 @@
 
 import { namespace } from './utils/namespace';
 import CopyToClipboard from './globals/CopyToClipboard';
+import Pagination from './globals/Pagination';
+import PingChart from './websites/PingChart';
 
 class Dispatcher {
   constructor() {
@@ -10,6 +12,12 @@ class Dispatcher {
 
   route() {
     switch (this.pageName) {
+      case 'websites:index':
+        new Pagination('websites').init();
+        break;
+      case 'websites:response_time:index':
+        new PingChart('[data-behavior="response-time-chart"]').init();
+        break;
       case 'users:instructions:index':
         new CopyToClipboard().init();
         break;

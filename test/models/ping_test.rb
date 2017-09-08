@@ -10,7 +10,7 @@ class PingTest < ActiveSupport::TestCase
   end
 
   test 'invalid without required attributes' do
-    %w(status).each do |attrs|
+    %w(status response_time).each do |attrs|
       @ping.send("#{attrs}=", nil)
       assert_not(@ping.valid?)
     end

@@ -26,11 +26,11 @@ $body-bg: $gray-lightest;
 $border-color: rgba(0, 0, 0, 0.125);
 $border-color-solid: #d7d9dc; // used when you need 100% opacity.
 $border-radius: 0.25rem;
-$box-shadow: 0 0 0 1px rgba(62, 64, 64, 0.05),
-             0 1px 3px rgba(62, 64, 64, 0.1),
-             0 1px 2px rgba(0, 0, 0, 0.05);
+$box-shadow: 0 0 0 1px rgba(62, 64, 64, 0.05), 0 1px 3px rgba(62, 64, 64, 0.1),
+  0 1px 2px rgba(0, 0, 0, 0.05);
 
-
+$box-shadow-hover: 0 0 0 1px rgba(62, 64, 64, 0.05),
+  0 1px 12px rgba(62, 64, 64, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
 
 // For each of Bootstrap's buttons, define text, background and border color.
 $btn-padding-x: 1rem;
@@ -44,8 +44,11 @@ $input-padding-y: 0.75rem;
 $input-box-shadow: inset 0 1px 2px rgba(216, 221, 230, 0.4);
 
 // Animations & Transitions
-$base-duration: 150ms;
-$base-timing: ease;
+$base-duration: 250ms;
+$base-timing: ease-in-out;
+
+// Pagination
+$pagination-hover-bg: $gray-lightest;
 
 // Define colors for form feedback states and, by default, alerts.
 $state-success-text: $white;

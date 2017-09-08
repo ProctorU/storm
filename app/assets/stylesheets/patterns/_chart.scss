@@ -1,0 +1,29 @@
+@import "base/base";
+
+.chart-bar {
+  fill: $brand-primary;
+}
+
+.chart-column {
+  fill: $gray-lightest;
+}
+
+.chart-axis {
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  text {
+    fill: $gray-light;
+  }
+
+  path {
+    display: none;
+  }
+}
+
+.chart-axis path,
+.chart-axis line {
+  fill: none;
+  stroke: $gray-lightest;
+  stroke-width: 0.125rem;
+}

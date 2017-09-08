@@ -6,6 +6,50 @@
   margin-bottom: 1rem;
 }
 
+a.card {
+  color: inherit;
+  position: relative;
+  text-decoration: none;
+}
+
+@include media-breakpoint-up(lg) {
+  .card-deck .card-container:not(:last-child) {
+    margin-right: ($spacer * 2);
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .card-deck {
+    display: block;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  margin-bottom: ($spacer * 2);
+
+  .card {
+    margin-bottom: 0;
+    transition: all $base-duration $base-timing;
+  }
+
+  &:hover .card {
+    box-shadow: $box-shadow-hover;
+    transform: translateY(-2px);
+  }
+}
+
+.card-link {
+  transition: all $base-duration $base-timing;
+
+  &:hover {
+    box-shadow: $box-shadow-hover;
+    transform: translateY(-2px);
+  }
+}
+
 .card-header {
   background-color: $white;
   padding-bottom: 1.5rem;
