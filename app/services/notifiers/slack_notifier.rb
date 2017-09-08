@@ -11,13 +11,18 @@ module Notifiers
     end
 
     def notify!
+      raise('Slack URL is not set') unless slack_url.present?
       notifier.ping(message, icon_url: icon_url)
     end
 
     private
 
+    def slack_url
+      @slack_url ||= Setting.global.slack_url
+    end
+
     def notifier
-      Slack::Notifier.new(Setting.global.slack_url, username: bot_username)
+      Slack::Notifier.new(slack_url, username: bot_username)
     end
 
     def bot_username
