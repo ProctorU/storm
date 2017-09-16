@@ -19,6 +19,7 @@ within Slack, and many more useful features.
 ## Table of contents
 
 - [Status](#status)
+- [To Do](#to-do)
 - [Deploy to Heroku](#deploy-to-heroku)
 - [Developing](#developing)
 - [Credits](#credits)
@@ -26,6 +27,13 @@ within Slack, and many more useful features.
 ## Status
 
 [![CircleCI](https://circleci.com/gh/ProctorU/storm.svg?style=svg)](https://circleci.com/gh/ProctorU/storm)
+
+## To Do
+- [ ] Edit websites
+- [ ] Reboot websites (servers, via AWS)
+- [ ] Remove Stats link
+- [ ] Add Ping callback for Notifiers
+- [ ] Built Storm-bot (Slack bot) API (website statuses, website reboots, etc.)
 
 ## Deploy to Heroku
 
