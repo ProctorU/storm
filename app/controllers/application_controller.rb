@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   before_action(:configure_permitted_parameters, if: :devise_controller?)
   before_action(:configure_initial_account)
+  before_action(:authenticate_user!, unless: :devise_controller?)
 
   private
 

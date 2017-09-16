@@ -1,9 +1,14 @@
 # WebsitesController
 class WebsitesController < ApplicationController
-  before_action(:authenticate_user!, unless: :devise_controller?)
+  include PaginatableConcern
 
   def index
-    @websites = Website.includes(:pings).active.decorate
+    @websites = Website.includes(:pings).active.paginate(params).decorate
+
+    respond_to do |format|
+      format.html
+      format.json { return_paginated_resource }
+    end
   end
 
   def new
@@ -19,6 +24,11 @@ class WebsitesController < ApplicationController
     else
       render(:new)
     end
+  end
+
+  def show
+    @website = Website.includes(:pings).find(params[:id])
+    @pings = @website.pings.paginate(params).decorate
   end
 
   private

@@ -1,8 +1,16 @@
 <div class="row">
   <div class="col-md-12">
     <% if @websites.any? %>
-      <div class="card-deck">
-        <%= render(@websites) %>
+      <div data-behavior="websites-list">
+        <%= render("websites/sliced", websites: @websites) %>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3">
+          <div class="text-center" data-behavior="pagination-wrapper">
+            <%= render("websites/next_page", websites: @websites) %>
+          </div>
+        </div>
       </div>
     <% else %>
       <%= render("shared/blankslate", resource: "website") do %>

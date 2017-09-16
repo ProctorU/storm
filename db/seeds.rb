@@ -5,3 +5,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+website_count = 12
+ping_count = 500
+total_records = website_count * ping_count + website_count
+
+progressbar = ProgressBar.create(total: total_records)
+
+website_count.times do
+  website = Website.create(
+    name: Faker::App.name,
+    url: Faker::Internet.url
+  )
+
+  progressbar.increment
+
+  ping_count.times do
+    Ping.create(
+      website: website,
+      status: [0, 1].sample,
+      response_time: rand(300..1000)
+    )
+
+    progressbar.increment
+  end
+end
+
+# remove any created background jobs.
+Delayed::Job.delete_all
