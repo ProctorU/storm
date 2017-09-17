@@ -5,7 +5,7 @@
     <% end %>
 
     <h3 class="auth-title text-center mb-3">
-      Create your account
+      <%= t('.header') %>
     </h3>
 
     <div class="card">
@@ -22,19 +22,13 @@
 
           <div class="form-group">
             <%= f.label :password %>
-            <% if @minimum_password_length %>
-              <small class="text-muted">
-                <em>(<%= @minimum_password_length %> characters minimum)</em>
-              </small>
-            <% end %>
             <%= f.password_field :password, autocomplete: "off",
               class: "form-control" %>
             <%= error_message_on(f.object, :password) %>
           </div>
 
           <div class="actions">
-            <%= f.submit "Sign up",
-              class: "btn btn-primary btn-block" %>
+            <%= f.submit t('.action'), class: "btn btn-primary btn-block" %>
           </div>
         <% end %>
       </div>

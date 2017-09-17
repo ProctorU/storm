@@ -31,10 +31,10 @@ within Slack, and many more useful features.
 ## To Do
 - [x] Edit websites
 - [x] Reboot websites (servers, via AWS)
-- [ ] Remove Stats link
+- [x] Make sure entire set is internationalized.
+- [x] Remove Stats link
 - [ ] Add Ping callback for Notifiers
 - [ ] Built Storm-bot (Slack bot) API (website statuses, website reboots, etc.)
-- [ ] Make sure entire set is internationalized.
 
 ## Deploy to Heroku
 

@@ -1,11 +1,10 @@
 <nav class="navbar navbar-inverse bg-primary">
   <ul class="navbar-nav">
-    <%= nav_link("Websites", root_path) %>
-    <%= nav_link("Stats", "#") %>
-    <%= nav_link("Settings", edit_settings_path) %>
-    <%= nav_link("Users", users_path) %>
+    <%= nav_link(t('.websites'), root_path) %>
+    <%= nav_link(t('.settings'), edit_settings_path) %>
+    <%= nav_link(t('.users'), users_path) %>
     <% if user_signed_in? %>
-      <%= nav_link("Sign Out", destroy_user_session_path, method: :delete) %>
+      <%= nav_link(t('.sign_out'), destroy_user_session_path, method: :delete) %>
     <% end %>
   </ul>
 </nav>

@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
   def configure_initial_account
     return unless InitialAccountSetup.new(current_user, request.path).required?
 
-    flash[:info] = 'Welcome to Storm! Let\'s get your app setup.'
+    flash[:info] = t('base.welcome')
     redirect_to(new_user_registration_path)
   end
 end

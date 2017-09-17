@@ -10,9 +10,11 @@ module Websites
     def reboot
       website.update_attributes(rebooting: true)
       client.instance(website.aws_instance_id).reboot
-      status = build_status("Rebooting: #{website.name}.")
+      status = build_status("#{I18n.t('base.rebooting')}: #{website.name}.")
     rescue => e
-      status = build_status("Failed to reboot #{website.name}: #{e}.")
+      status = build_status(
+        "#{I18n.t('base.failed_to_reboot')} #{website.name}: #{e}."
+      )
     ensure
       status
     end

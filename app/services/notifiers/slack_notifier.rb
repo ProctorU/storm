@@ -11,7 +11,7 @@ module Notifiers
     end
 
     def notify!
-      raise('Slack URL is not set') unless slack_url.present?
+      raise(I18n.t('base.missing_slack_url')) unless slack_url.present?
       notifier.ping(message, icon_url: icon_url)
     end
 

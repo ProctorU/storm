@@ -29,7 +29,7 @@ export default class CopyToClipboard {
 
   showTooltip(el) {
     el.setAttribute('data-balloon-visible', true);
-    el.setAttribute('data-balloon', 'Copied!');
+    el.setAttribute('data-balloon', polyglot.t('base.copied'));
     el.setAttribute('data-balloon-pos', 'up');
   }
 }

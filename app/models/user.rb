@@ -3,7 +3,7 @@ class User < ApplicationRecord
 
   devise(
     :invitable, :database_authenticatable, :registerable,
-    :recoverable, :rememberable, :trackable, :validatable
+    :rememberable, :trackable, :validatable
   )
 
   # alias the Devise Invitable method to check if a user is pending creation.

@@ -3,8 +3,8 @@ require('net/http')
 module Pings
   # Manager
   class Manager
-    attr_reader :website, :retry_attempt
-    alias_method :retry_attempt?, :retry_attempt
+    attr_reader(:website, :retry_attempt)
+    alias_method(:retry_attempt?, :retry_attempt)
 
     def initialize(website, retry_attempt = false)
       @website = website
