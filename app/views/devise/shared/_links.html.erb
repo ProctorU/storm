@@ -1,13 +1,11 @@
 <% unless User.any? %>
   <div class="card card-block">
     <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-      <hr>
-
       <p class="mb-0">
-        Are you a new user?
+        <%= t('.new_user') %>
       </p>
 
-      <%= link_to "Sign up", new_registration_path(resource_name, organization_id: params[:organization_id]) %>
+      <%= link_to t('.sign_up'), new_registration_path(resource_name, organization_id: params[:organization_id]) %>
     <% end -%>
   </div>
 <% end %>

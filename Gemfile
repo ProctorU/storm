@@ -28,6 +28,7 @@ gem 'webpacker', '~> 2.0'
 group :test do
   gem 'minitest-rails-capybara'
   gem 'minitest-ci'
+  gem 'mocha', '~> 1.3'
   gem 'webmock', '~> 2.1'
   gem 'vcr', '~> 3.0', '>= 3.0.3'
 end

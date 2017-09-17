@@ -11,6 +11,6 @@ class PingDecorator < Draper::Decorator
   end
 
   def status_text
-    successful? ? 'success' : 'fail'
+    successful? ? h.t('pings.success') : h.t('pings.fail')
   end
 end

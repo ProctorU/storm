@@ -30,12 +30,55 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  base:
+    copied: Copied!
+    failed_to_reboot: Failed to reboot
+    missing_slack_url: Slack URL is not set
+    one_setting: There can only be one setting
+    rebooting: Rebooting
+    welcome: Welcome to Storm! Let's get your app setup.
+
   pagination:
     fetching: Fetching...
     failed: Failed to load next page of results
+  pings:
+    success: success
+    fail: fail
+  settings:
+    edit:
+      title: Let's update your settings
+    form:
+      action: Update Settings
+      aws_info: >
+        Although completely optional, configuring Storm with AWS will give
+        you the ability to reboot servers from Storm.
+      aws_instructions: >
+        Instructions for finding your AWS Key and Secret can be found
+      aws_action: here
+      aws_section: AWS Configuration
+      slack_action: here
+      slack_instructions: >
+        Instructions for finding your Slack URL can be found
+      labels:
+        aws_key: AWS Key
+        aws_secret: AWS Secret
+        slack_url: Slack URL for notifications
+    update:
+      success: Your settings have been successfully updated.
   shared:
     blankslate:
       title: No %{resource} have been created yet.
+    browse-happy:
+      text: >
+        You are using an <strong>outdated</strong> browser.
+        Please
+        <a class="alert-link" href="http://browsehappy.com/" target="_blank"><u>upgrade your browser</u></a>
+        to improve your experience and security.
+    navbar:
+      websites: Websites
+      settings: Settings
+      users: Users
+      sign_out: Sign out
   websites:
     charts:
       response_time:
@@ -70,6 +113,23 @@ en:
       success: >
         %{name} has been successfully updated.
   users:
+    member: member
+    pending: pending
+
+    index:
+      created_on: Created on
+      email: Email
+      invite: Invite team member
+      status: Status
+      title: Here's your team
+    invitations:
+      instructions:
+        index:
+          action: Copy link to clipboard
+          title: Instructions
+          instructions: >
+            You have successfully invited <code>%{email}</code>. Since
+            we do not deliver emails, here is a fancy link for them.
     registrations:
       new:
         disable_registration: >

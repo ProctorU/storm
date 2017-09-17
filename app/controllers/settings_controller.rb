@@ -9,7 +9,7 @@ class SettingsController < ApplicationController
     @setting = Setting.first
 
     if @setting.update(setting_params)
-      flash[:success] = 'Your settings have been updated.'
+      flash[:success] = t('.success')
       redirect_to edit_settings_path
     else
       render :edit

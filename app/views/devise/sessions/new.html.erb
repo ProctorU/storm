@@ -5,7 +5,7 @@
     <% end %>
 
     <h3 class="auth-title text-center mb-3">
-      Welcome back
+      <%= t('.header') %>
     </h3>
 
     <div class="card">
@@ -26,12 +26,12 @@
           <% if devise_mapping.rememberable? -%>
             <div class="form-group">
               <%= f.check_box :remember_me %>
-              <%= f.label :remember_me, "Stay signed in?" %>
+              <%= f.label :remember_me, t('.labels.remember_me') %>
             </div>
           <% end -%>
 
           <div class="actions">
-            <%= f.submit "Sign in", class: "btn btn-primary btn-block" %>
+            <%= f.submit t('.action'), class: "btn btn-primary btn-block" %>
           </div>
         <% end %>
       </div>

@@ -17,7 +17,6 @@ class Setting < ApplicationRecord
   private
 
   def validate_only_one_setting_record
-    errors.add(:base, 'There can only be one setting') if
-      Setting.count.positive?
+    errors.add(:base, I18n.t('base.one_setting')) if Setting.count.positive?
   end
 end

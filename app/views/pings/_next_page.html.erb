@@ -1,7 +1,0 @@
-<% unless pings.last_page? %>
-  <button class="btn btn-primary btn-block mb-4"
-    data-url="<%= website_url(website, page: pings.next_page) %>"
-    data-behavior="load-more">
-    Load more
-  </button>
-<% end %>

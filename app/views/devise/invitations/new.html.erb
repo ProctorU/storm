@@ -1,5 +1,5 @@
 <div class="page-heading">
-  <h4 class="page-title"><%= t "devise.invitations.new.header" %></h4>
+  <h4 class="page-title"><%= t ".header" %></h4>
 </div>
 
 <div class="row">
@@ -8,7 +8,7 @@
       class: "card card-link") do %>
       <div class="card-block text-muted text-center d-flex align-items-center justify-content-center">
         <i class="mr-3" data-feather="arrow-left"></i>
-        <h6 class="mb-0">Head back</h6>
+        <h6 class="mb-0"><%= t('.head_back') %></h6>
       </div>
     <% end %>
   </div>
@@ -34,7 +34,7 @@
           <% end %>
 
           <div class="actions">
-            <%= f.submit t("devise.invitations.new.submit_button"), class: "btn btn-primary" %>
+            <%= f.submit t(".submit_button"), class: "btn btn-primary" %>
           </div>
         <% end %>
       </div>

@@ -5,7 +5,7 @@
     <% end %>
 
     <h3 class="auth-title text-center mb-3">
-      Welcome, set your password
+      <%= t('.header') %>
     </h3>
 
     <div class="card">
@@ -31,13 +31,11 @@
           </div>
 
           <div class="actions">
-            <%= f.submit t("devise.invitations.edit.submit_button"),
+            <%= f.submit t(".submit_button"),
               class: "btn btn-primary btn-block" %>
           </div>
         <% end %>
       </div>
     </div>
-
-    <%= render "devise/shared/links" %>
   </div>
 </div>
