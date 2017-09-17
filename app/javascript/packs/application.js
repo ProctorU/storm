@@ -4,6 +4,7 @@ import { namespace } from './utils/namespace';
 import CopyToClipboard from './globals/CopyToClipboard';
 import Pagination from './globals/Pagination';
 import PingChart from './websites/PingChart';
+import Polyglot from 'node-polyglot';
 
 class Dispatcher {
   constructor() {
@@ -23,8 +24,24 @@ class Dispatcher {
         break;
     }
   }
+
+  feather() {
+    feather.replace();
+  }
+
+  translate() {
+    const phrases = document
+      .querySelector('[data-behavior="translations"]')
+      .getAttribute('data-phrases');
+
+    window.polyglot = new Polyglot({ phrases: JSON.parse(phrases) });
+  }
 }
 
 document.addEventListener('turbolinks:load', () => {
-  new Dispatcher().route();
+  const dispatcher = new Dispatcher();
+
+  dispatcher.feather();
+  dispatcher.route();
+  dispatcher.translate();
 });

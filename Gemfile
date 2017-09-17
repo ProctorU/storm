@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'aws-sdk', '~> 2.10'
 gem 'attr_encrypted', '~> 3.0', github: 'attr-encrypted/attr_encrypted'
 gem 'bootstrap', '4.0.0.alpha6'
 gem 'delayed_job_active_record', '~> 4.1.2'

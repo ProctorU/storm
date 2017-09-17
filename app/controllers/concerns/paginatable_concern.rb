@@ -19,7 +19,7 @@ module PaginatableConcern
       ),
       link: (
         render_to_string(
-          'websites/_next_page.html.erb',
+          'websites/_next_page',
           locals: { websites: ivar },
           layout: false
         )

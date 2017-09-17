@@ -1,11 +1,9 @@
-<div class="card-container">
-  <%= link_to(website_path(website), class: "card") do %>
-    <div class="card-block">
-      <h4 class="card-title"><%= website.name %></h4>
+<%= link_to(website_path(website), class: "card card-link") do %>
+  <div class="card-block">
+    <h4 class="card-title"><%= website.name %></h4>
 
-      <div class="hr-sect">Recent Pings</div>
+    <div class="hr-sect">Recent Pings</div>
 
-      <%= render(website.recent_pings) %>
-    </div>
-  <% end %>
-</div>
+    <%= render(website.recent_pings) %>
+  </div>
+<% end %>

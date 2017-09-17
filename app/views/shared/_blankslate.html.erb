@@ -1,6 +1,6 @@
 <div class="blankslate">
   <h4 class="blankslate-title">
-    No <%= resource.titleize.pluralize %> have been created yet.
+    <%= t('.title', resource: resource.pluralize) %>
   </h4>
 
   <% if yield.present? %>

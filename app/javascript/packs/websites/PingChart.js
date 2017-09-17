@@ -60,9 +60,8 @@ export default class PingChart {
     const { margin, tickSize, axisPadding, width, height } = this.defaults;
 
     this.graph = d3.select(this.selector);
-
     this.chartEl.innerHTML = '';
-    d3.select('svg').remove();
+
     const svg = (this.svg = this.graph
       .append('svg')
       .attr('width', width)
