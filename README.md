@@ -10,8 +10,6 @@
 
 <br>
 
-> Storm is currently a WIP.
-
 > Storm is a 100% open-source, internationalized, platform that provides a self-hosted monitoring
 service to your web apps. It provides Slack notifications, AWS server reboot
 within Slack, and many more useful features.
@@ -19,14 +17,20 @@ within Slack, and many more useful features.
 ## Table of contents
 
 - [Status](#status)
-- [To Do](#to-do)
 - [Deploy to Heroku](#deploy-to-heroku)
+- [To Do](#to-do)
 - [Developing](#developing)
 - [Credits](#credits)
 
 ## Status
 
 [![CircleCI](https://circleci.com/gh/ProctorU/storm.svg?style=svg)](https://circleci.com/gh/ProctorU/storm)
+
+## Deploy to Heroku
+
+> Be sure to enable the "worker" resource after successfully deploying.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## To Do
 - [x] Edit websites
@@ -37,12 +41,6 @@ within Slack, and many more useful features.
 - [ ] Build Storm-bot (Slack bot) API (website statuses, website reboots, etc.)
 - [ ] Build Chrome new-tabs extension.
 - [ ] Build iOS/Android app.
-
-## Deploy to Heroku
-
-> Be sure to enable the "worker" resource after successfully deploying.
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Developing
 
