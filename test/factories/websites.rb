@@ -4,6 +4,7 @@ FactoryGirl.define do
     sequence(:url) { |n| "http://#{n}.proctoru.com" }
     ssl(false)
     active(true)
+    rebooting(false)
 
     trait(:with_basic_auth) do
       basic_auth_username('username')

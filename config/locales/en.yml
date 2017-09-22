@@ -44,6 +44,13 @@ en:
   pings:
     success: success
     fail: fail
+    notifiers:
+      down: down
+      down_after_reboot: >
+        Waiting for a successful ping for %{name} after being rebooted.
+      up: up
+      up_after_reboot: "%{name} is responding again after being rebooted."
+      welcome_message: "Starting to track %{name}. First ping: *%{status}*."
   settings:
     edit:
       title: Let's update your settings
@@ -80,6 +87,10 @@ en:
       users: Users
       sign_out: Sign out
   websites:
+    up:
+      first: "The storm has died down -- %{name} is back up :sun_with_face:"
+    down:
+      first: "A storm is brewing, time to get moving -- %{name} may be down :lightning: \n %{url}"
     charts:
       response_time:
         index:
