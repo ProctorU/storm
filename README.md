@@ -10,9 +10,9 @@
 
 <br>
 
-> Storm is a 100% open-source, internationalized, platform that provides a self-hosted monitoring
+> Storm is a 100% open-source and internationalized platform that provides a self-hosted monitoring
 service to your web apps. It provides Slack notifications, AWS server reboot
-within Slack, and many more useful features.
+within Slack, response-time graphs, and many more useful features.
 
 ## Table of contents
 
