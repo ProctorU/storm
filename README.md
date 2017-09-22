@@ -34,7 +34,9 @@ within Slack, and many more useful features.
 - [x] Make sure entire set is internationalized.
 - [x] Remove Stats link
 - [ ] Add Ping callback for Notifiers
-- [ ] Built Storm-bot (Slack bot) API (website statuses, website reboots, etc.)
+- [ ] Build Storm-bot (Slack bot) API (website statuses, website reboots, etc.)
+- [ ] Build Chrome new-tabs extension.
+- [ ] Build iOS/Android app.
 
 ## Deploy to Heroku
 
