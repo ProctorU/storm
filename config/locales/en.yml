@@ -138,6 +138,7 @@ en:
         index:
           action: Copy link to clipboard
           title: Instructions
+          back: Back to users
           instructions: >
             You have successfully invited <code>%{email}</code>. Since
             we do not deliver emails, here is a fancy link for them.
