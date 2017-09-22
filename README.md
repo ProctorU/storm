@@ -33,7 +33,7 @@ within Slack, and many more useful features.
 - [x] Reboot websites (servers, via AWS)
 - [x] Make sure entire set is internationalized.
 - [x] Remove Stats link
-- [ ] Add Ping callback for Notifiers
+- [x] Add Ping callback for Notifiers
 - [ ] Build Storm-bot (Slack bot) API (website statuses, website reboots, etc.)
 - [ ] Build Chrome new-tabs extension.
 - [ ] Build iOS/Android app.
