@@ -97,12 +97,12 @@ ActiveRecord::Schema.define(version: 20170804190921) do
     t.boolean "active", default: true
     t.string "basic_auth_username"
     t.string "basic_auth_password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.datetime "deleted_at"
     t.string "aws_instance_id"
     t.string "aws_region"
     t.boolean "rebooting", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "deleted_at"
     t.index ["active"], name: "index_websites_on_active"
     t.index ["deleted_at"], name: "index_websites_on_deleted_at"
     t.index ["name"], name: "index_websites_on_name"
