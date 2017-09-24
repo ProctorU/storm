@@ -1,0 +1,28 @@
+@import "base/base";
+
+.footer {
+  background-color: $white;
+  bottom: 0;
+  box-shadow: $box-shadow;
+  height: $footer-height;
+  position: absolute;
+  width: 100%;
+
+  .footer-link {
+    .footer-logo {
+      transition: all $base-duration $base-timing;
+    }
+
+    &:hover .footer-logo {
+      transform: scale(1.02);
+    }
+
+    &:active .footer-logo {
+      transform: scale(0.98);
+    }
+  }
+
+  .footer-logo {
+    width: 160px;
+  }
+}

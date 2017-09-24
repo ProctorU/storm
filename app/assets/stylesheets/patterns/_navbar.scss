@@ -6,6 +6,12 @@
   .navbar-nav {
     flex-direction: row;
 
+    @include media-breakpoint-down(sm) {
+      .nav-link {
+        font-size: 0.9rem;
+      }
+    }
+
     .nav-link {
       font-weight: 600;
       margin-bottom: 0.5rem;
