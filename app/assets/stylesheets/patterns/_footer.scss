@@ -1,12 +1,12 @@
 @import "base/base";
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: $footer-height;
   background-color: $white;
+  bottom: 0;
   box-shadow: $box-shadow;
+  height: $footer-height;
+  position: absolute;
+  width: 100%;
 
   .footer-link {
     .footer-logo {
