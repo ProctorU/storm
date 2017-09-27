@@ -1,5 +1,15 @@
 @import "base/base";
 
-.logged-in {
+.logged-in,
+.logged-out {
   margin-bottom: $footer-height;
+}
+
+.logged-out {
+  background-color: $brand-primary-dark;
+  background-image: linear-gradient(
+    to left,
+    darken($brand-primary-dark, 5%),
+    $brand-primary-dark
+  );
 }

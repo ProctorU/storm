@@ -19,29 +19,7 @@
       <div class="mt-4"><%= yield %></div>
     </div>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="text-center py-5">
-          <%= link_to("https://twitter.com/ProctorUEng", class: "footer-link",
-            target: "_blank") do %>
-            <%= image_tag("https://s3-us-west-2.amazonaws.com/storm-app/proctoru-open-source.svg",
-              class: "footer-logo mb-3") %>
-          <% end %>
-
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item">
-              <%= link_to("GitHub", "https://github.com/ProctorU/Storm",
-                class: "text-muted", target: "_blank") %>
-            </li>
-            <li class="list-inline-item">&middot;</li>
-            <li class="list-inline-item">
-              <%= link_to("Twitter", "https://twitter.com/ProctorUEng",
-                class: "text-muted", target: "_blank") %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    <%= render("shared/footer") %>
 
     <div data-behavior="translations" data-phrases="<%= i18n_phrases %>"></div>
   </body>

@@ -3,17 +3,3 @@
 .flex-1 {
   flex: 1;
 }
-
-.mh-50 {
-  min-height: 50vh;
-}
-
-.mh-100 {
-  min-height: 100vh;
-}
-
-@media (min-width: 768px) {
-  .mh-md-100 {
-    min-height: 100vh;
-  }
-}

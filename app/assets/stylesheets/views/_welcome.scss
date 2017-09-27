@@ -1,25 +1,28 @@
 @import "base/base";
 
 .welcome {
+  padding-top: 70px;
+
   .welcome-logo {
-    width: 125px;
+    width: 80px;
   }
 
   .welcome-title {
     color: $white;
-    font-size: 3rem;
+    font-family: "PT Serif", serif;
+    font-size: 2.5rem;
     font-weight: 300;
   }
 
   .welcome-subtitle {
-    color: darken($white, 20%);
-    font-size: 1.25rem;
+    color: rgba($white, 0.5);
+    font-family: "PT Serif", serif;
+    font-size: 1.5rem;
     line-height: 1.5;
   }
 
-  .welcome-slack-message {
-    display: block;
-    margin-bottom: 15px;
-    width: 400px;
+  .welcome-mockup {
+    width: 100%;
+    max-width: 800px;
   }
 }
