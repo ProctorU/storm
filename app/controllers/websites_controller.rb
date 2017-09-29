@@ -3,7 +3,7 @@ class WebsitesController < ApplicationController
   include PaginatableConcern
 
   def index
-    @websites = Website.includes(:pings).active.paginate(params).decorate
+    @websites = Website.active.paginate(params).decorate
 
     respond_to do |format|
       format.html
@@ -27,8 +27,8 @@ class WebsitesController < ApplicationController
   end
 
   def show
-    @website = Website.includes(:pings).find(params[:id])
-    @pings = @website.pings.paginate(params).decorate
+    @website = Website.find(params[:id])
+    @pings = @website.monthly_pings.paginate(params).decorate
   end
 
   def edit

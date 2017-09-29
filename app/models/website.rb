@@ -8,7 +8,8 @@ class Website < ApplicationRecord
 
   has_many :pings, dependent: :destroy
   has_many :recent_pings, -> { limit(5) }, class_name: 'Ping'
-  has_many :daily_pings, -> { limit(1440) }, class_name: 'Ping'
+  has_many :daily_pings, -> { limit(1_440) }, class_name: 'Ping'
+  has_many :monthly_pings, -> { limit(43_800) }, class_name: 'Ping'
 
   validates(:name, presence: true)
   validates(:url, presence: true, format: { with: VALID_URL_REGEX })
