@@ -8,4 +8,21 @@
       <%= user.member_status_text %>
     </span>
   </td>
+
+  <td>
+    <% if user.pending? %>
+      <%= form_for(
+        user,
+        as: :user,
+        url: invitation_path(:user),
+        html: { method: :post }
+      ) do |f| %>
+        <%= f.hidden_field(:email, value: f.object.email) %>
+        <%= button_tag(class: "btn btn-link btn-sm icon-15", title: "Invitation Link",
+          type: "submit") do %>
+          <i data-feather="mail"></i>
+        <% end %>
+      <% end %>
+    <% end %>
+  </td>
 </tr>
