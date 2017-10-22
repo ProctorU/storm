@@ -18,10 +18,26 @@
         html: { method: :post }
       ) do |f| %>
         <%= f.hidden_field(:email, value: f.object.email) %>
-        <%= button_tag(class: "btn btn-link btn-sm icon-15", title: "Invitation Link",
+        <%= button_tag(class: "btn btn-link btn-sm icon-15",
+          title: t('.invitation_link'),
           type: "submit") do %>
           <i data-feather="mail"></i>
         <% end %>
+      <% end %>
+    <% end %>
+  </td>
+
+  <td>
+    <%= form_for(
+      user,
+      as: :user,
+      url: password_path(:user),
+      html: { method: :post }) do |f| %>
+      <%= f.hidden_field(:email, value: f.object.email) %>
+      <%= button_tag(class: "btn btn-link btn-sm icon-15",
+        title: t('.reset_password'),
+        type: "submit") do %>
+        <i data-feather="lock"></i>
       <% end %>
     <% end %>
   </td>
