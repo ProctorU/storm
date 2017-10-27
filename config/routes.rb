@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations',
-    invitations: 'users/invitations'
+    invitations: 'users/invitations',
+    passwords: 'users/passwords'
   }, path_names: {
     sign_in: 'sign-in',
     sign_out: 'sign-out',
@@ -29,6 +30,10 @@ Rails.application.routes.draw do
 
   namespace(:users) do
     namespace(:invitations) do
+      resources(:instructions, only: %w(index))
+    end
+
+    namespace(:passwords) do
       resources(:instructions, only: %w(index))
     end
   end

@@ -133,6 +133,18 @@ en:
       invite: Invite team member
       status: Status
       title: Here's your team
+    passwords:
+      create:
+        fail: You have unsuccessfully generated the Reset Password URL.
+      instructions:
+        index:
+          action: Copy link to clipboard
+          title: Instructions
+          back: Back to users
+          instructions: >
+            You have successfully generated the Reset Password URL for
+            <code>%{email}</code>. Since we do not deliver emails,
+            here is a fancy link for them.
     invitations:
       instructions:
         index:
@@ -147,3 +159,6 @@ en:
         disable_registration: >
           If you already have an account, please sign in. Otherwise, you
           must be invited to join Storm.
+    user:
+      invitation_link: Invitation Link
+      reset_password: Reset password
