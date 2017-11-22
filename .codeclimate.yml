@@ -1,0 +1,26 @@
+prepare:
+  fetch:
+    - "https://raw.githubusercontent.com/ProctorU/guides/master/style/ruby/.rubocop.yml"
+    - "https://raw.githubusercontent.com/ProctorU/guides/master/style/scss/.scss-lint.yml"
+
+plugins:
+  brakeman:
+    enabled: true
+  fixme:
+    enabled: true
+  reek:
+    enabled: true
+  rubocop:
+    enabled: true
+  scss-lint:
+    enabled: true
+
+exclude_patterns:
+  - 'config/'
+  - 'db/'
+  - 'docs/'
+  - 'node_modules/'
+  - 'public/'
+  - 'test/'
+  - 'tmp/'
+  - 'vendor/'

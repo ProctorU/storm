@@ -1,7 +1,0 @@
-# https://houndci.com/configuration
-
-ruby:
-  enabled: true
-  config_file: .rubocop.yml
-jshint:
-  enabled: false
