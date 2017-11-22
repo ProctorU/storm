@@ -8,6 +8,10 @@ plugins:
     enabled: true
   fixme:
     enabled: true
+  flog:
+    enabled: true
+  markdownlint:
+    enabled: true
   reek:
     enabled: true
   rubocop:
