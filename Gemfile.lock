@@ -155,7 +155,7 @@ GEM
       capybara (~> 2.2)
       minitest (~> 5.0)
       rake
-    minitest-ci (3.2.0)
+    minitest-ci (3.3.0)
       minitest (>= 5.0.6)
     minitest-metadata (0.6.0)
       minitest (>= 4.7, < 6.0)
