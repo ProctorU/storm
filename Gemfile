@@ -23,7 +23,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'slack-notifier', '~> 2.3.1'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
-gem 'webpacker', '~> 2.0'
+gem 'webpacker', '~> 3.1'
 
 group :test do
   gem 'minitest-rails-capybara'
