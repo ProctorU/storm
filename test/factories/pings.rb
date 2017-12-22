@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :ping do
     website { association(:website) }
     response_time { rand(300..1000) }

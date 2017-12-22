@@ -36,7 +36,7 @@ end
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.16'
-  gem 'factory_girl_rails', '~> 4.9'
+  gem 'factory_bot_rails', '~> 4.8.2'
   gem 'faker', '~> 1.8'
   gem 'selenium-webdriver'
 end

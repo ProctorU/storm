@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :setting do
     aws_key('aws_key')
     aws_secret('aws_secret')
