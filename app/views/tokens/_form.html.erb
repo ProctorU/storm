@@ -1,0 +1,13 @@
+<%= form_for(token) do |f| %>
+  <div class="form-group">
+    <%= f.label(:name) %>
+    <%= f.text_field(:name,
+      autofocus: true, autocomplete: :off,
+      class: "form-control") %>
+    <%= error_message_on(f.object, :name) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

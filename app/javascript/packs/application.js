@@ -19,6 +19,7 @@ class Dispatcher {
       case 'websites:response_time:index':
         new PingChart('[data-behavior="response-time-chart"]').init();
         break;
+      case 'tokens:index':
       case 'users:instructions:index':
         new CopyToClipboard().init();
         break;

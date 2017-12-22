@@ -1,0 +1,21 @@
+<tr>
+  <td><%= token.name %></td>
+
+  <td><%= token.created_by.email %></td>
+
+  <td><%= token.formatted_time(:last_used_at) %></td>
+
+  <td>
+    <button class="btn btn-link btn-sm icon-15" type="button"
+      data-clipboard-text="<%= token.value %>"
+      data-behavior="copy-to-clipboard">
+      <i data-feather="clipboard"></i>
+    </button>
+  </td>
+
+  <td>
+    <%= link_to(t('.revoke'), token, method: :delete,
+      class: 'btn btn-outline-danger btn-sm float-right',
+      data: { confirm: t('.confirm') }) %>
+  </td>
+</tr>

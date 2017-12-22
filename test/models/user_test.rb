@@ -15,4 +15,14 @@ class UserTest < ActiveSupport::TestCase
       assert_not(@user.valid?)
     end
   end
+
+  test 'successfully removed tokens after deletion' do
+    @user.save
+    create(:token, created_by: @user)
+    assert_equal(1, @user.tokens.size)
+
+    assert_difference('Token.count', -1) do
+      @user.destroy
+    end
+  end
 end
