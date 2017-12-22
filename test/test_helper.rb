@@ -4,7 +4,7 @@ require 'minitest/rails/capybara'
 require 'mocha/test_unit'
 
 class ActiveSupport::TestCase
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
 
   Delayed::Worker.delay_jobs = false
 end
