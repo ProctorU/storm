@@ -6,11 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-website_count = 12
+website_count = 4
 ping_count = 500
 total_records = website_count * ping_count + website_count
 
 progressbar = ProgressBar.create(total: total_records)
+
+# create default Setting
+SettingsCreator.execute
 
 website_count.times do
   website = Website.create(
