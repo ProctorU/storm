@@ -14,10 +14,9 @@ module Notifiers
 
       test 'notify! without a Slack URL present' do
         create(:setting, slack_url: nil)
+        instance = Notifiers::Services::SlackService.new('msg', 'bot')
 
-        assert_raise do
-          Notifiers::Services::SlackService.new('msg').notify!
-        end
+        assert_not(instance.send(:enabled?))
       end
     end
   end

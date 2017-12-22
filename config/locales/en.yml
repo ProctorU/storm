@@ -33,7 +33,6 @@ en:
   base:
     copied: Copied!
     failed_to_reboot: Failed to reboot
-    missing_slack_url: Slack URL is not set
     one_setting: There can only be one setting
     rebooting: Rebooting
     welcome: Welcome to Storm! Let's get your app setup.

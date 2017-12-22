@@ -12,11 +12,15 @@ module Notifiers
       end
 
       def notify!
-        raise(I18n.t('base.missing_slack_url')) unless slack_url.present?
+        return unless enabled?
         notifier.ping(message, icon_url: icon_url)
       end
 
       private
+
+      def enabled?
+        slack_url.present?
+      end
 
       def slack_url
         @slack_url ||= Setting.global.slack_url

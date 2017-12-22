@@ -46,7 +46,13 @@ within Slack, response-time graphs, and many more useful features.
 
 1. Thank you! We love [our contributors](https://github.com/ProctorU/storm/graphs/contributors)!
 1. Clone the repository.
-1. Install missing dependencies: `bundle install`.
+1. Install missing dependencies:
+
+    ```bash
+    bundle install
+    yarn install
+    ```
+
 1. Setup your database: `rails db:setup`.
 1. Start your server with foreman: `foreman start -f Procfile.dev`.
 1. Make your changes in a thoughtfully-named branch.
