@@ -1,18 +1,15 @@
-@import "base/base";
-
-// NOTE: remove once Bootstrap 4 is officially released.
-hr {
-  background-color: $border-color;
-  border: 0;
-  clear: both;
-  display: block;
-  height: 1px;
-  width: 100%;
-}
-
+// hr {
+//   background-color: $border-color;
+//   border: 0;
+//   clear: both;
+//   display: block;
+//   height: 1px;
+//   width: 100%;
+// }
+//
 .hr-sect {
   align-items: center;
-  color: darken($gray-lighter, 5%);
+  color: $gray-400;
   display: flex;
   flex-basis: 100%;
   font-size: 0.9rem;
@@ -51,5 +48,5 @@ hr {
   margin-left: 1rem;
   margin-right: 1rem;
   position: relative;
-  top: 10px;
+  top: 8px;
 }

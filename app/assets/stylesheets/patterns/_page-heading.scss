@@ -1,7 +1,12 @@
-@import "base/base";
-
 .page-heading {
-  padding-bottom: 2rem;
-  padding-top: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   text-align: center;
+
+  .page-title {
+  }
+
+  .page-subtitle {
+    margin-bottom: 0;
+  }
 }

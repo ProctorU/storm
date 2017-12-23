@@ -2,11 +2,11 @@
   <h4 class="page-title"><%= t(".title") %></h4>
 </div>
 
-<div class="row">
-  <div class="col-sm-4 offset-sm-4">
+<div class="row justify-content-center">
+  <div class="col-sm-4">
     <%= link_to(websites_path,
-      class: "card card-link") do %>
-      <div class="card-block text-muted text-center d-flex align-items-center justify-content-center">
+      class: "card card-link mb-3") do %>
+      <div class="card-body text-muted text-center d-flex align-items-center justify-content-center">
         <i class="mr-3" data-feather="arrow-left"></i>
         <h6 class="mb-0"><%= t('.back') %></h6>
       </div>
@@ -14,12 +14,10 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-6 offset-md-3">
-    <div class="card">
-      <div class="card-block">
-        <%= render("form", website: @website) %>
-      </div>
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card card-body mb-3">
+      <%= render("form", website: @website) %>
     </div>
   </div>
 </div>

@@ -1,8 +1,6 @@
-//= require patterns/_auth
-//= require patterns/_blankslate
-//= require patterns/_card
-//= require patterns/_chart
-//= require patterns/_footer
-//= require patterns/_navbar
-//= require patterns/_page-heading
-//= require patterns/_table
+@import 'patterns/blankslate';
+@import 'patterns/card';
+@import 'patterns/chart';
+@import 'patterns/footer';
+@import 'patterns/page-heading';
+@import 'patterns/table';

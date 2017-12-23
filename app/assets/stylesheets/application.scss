@@ -1,6 +1,9 @@
-//= require vendor/_base
-//= require reboot/_base
-//= require components/_base
-//= require patterns/_base
-//= require utils/_base
-//= require views/_base
+@import 'hootstrap';
+@import 'base/base';
+@import 'vendor/base';
+@import 'reboot/base';
+
+@import 'components/base';
+@import 'patterns/base';
+@import 'views/base';
+@import 'utils/base';

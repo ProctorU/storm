@@ -5,8 +5,8 @@
 <div class="row">
   <div class="col-sm-4 offset-sm-4">
     <%= link_to(new_user_invitation_path,
-      class: "card card-link") do %>
-      <div class="card-block text-muted text-center d-flex align-items-center justify-content-center">
+      class: "card card-link mb-3") do %>
+      <div class="card-body text-muted text-center d-flex align-items-center justify-content-center">
         <i class="mr-3" data-feather="user-plus"></i>
         <h6 class="mb-0"><%= t('.invite') %></h6>
       </div>
@@ -14,26 +14,24 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-8 offset-md-2">
-    <div class="card">
-      <div class="card-block">
-        <div class="table-responsive">
-          <table class="table table-border-around mb-0">
-            <thead>
-              <tr>
-                <th><%= t('.email') %></th>
-                <th><%= t('.created_on') %></th>
-                <th><%= t('.status') %></th>
-                <th></th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <%= render(@users) %>
-            </tbody>
-          </table>
-        </div>
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card card-body mb-3">
+      <div class="table-responsive">
+        <table class="table table-border-around mb-0">
+          <thead>
+            <tr>
+              <th><%= t('.email') %></th>
+              <th><%= t('.created_on') %></th>
+              <th><%= t('.status') %></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render(@users) %>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

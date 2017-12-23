@@ -5,8 +5,8 @@
 <div class="row">
   <div class="col-sm-4 offset-sm-4">
     <%= link_to(users_path,
-      class: "card card-link") do %>
-      <div class="card-block text-muted text-center d-flex align-items-center justify-content-center">
+      class: "card card-link mb-3") do %>
+      <div class="card-body text-muted text-center d-flex align-items-center justify-content-center">
         <i class="mr-3" data-feather="arrow-left"></i>
         <h6 class="mb-0"><%= t('.back') %></h6>
       </div>
@@ -14,31 +14,29 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-6 offset-md-3">
-    <div class="card">
-      <div class="card-block">
-        <p><%= sanitize(t('.instructions', email: @user.email)) %></p>
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card card-body mb-3">
+      <p><%= sanitize(t('.instructions', email: @user.email)) %></p>
 
-        <div class="input-group">
-          <input type="text"
-            class="form-control"
-            value="<%= edit_password_url(
+      <div class="input-group">
+        <input type="text"
+          class="form-control"
+          value="<%= edit_password_url(
+            @user,
+            reset_password_token: params[:token]
+          ) %>" />
+
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="button"
+            data-clipboard-text="<%= edit_password_url(
               @user,
               reset_password_token: params[:token]
-            ) %>" />
-
-          <span class="input-group-btn">
-            <button class="btn btn-primary" type="button"
-              data-clipboard-text="<%= edit_password_url(
-                @user,
-                reset_password_token: params[:token]
-              ) %>"
-              data-behavior="copy-to-clipboard">
-              <%= t('.action') %>
-            </button>
-          </span>
-        </div>
+            ) %>"
+            data-behavior="copy-to-clipboard">
+            <%= t('.action') %>
+          </button>
+        </span>
       </div>
     </div>
   </div>
