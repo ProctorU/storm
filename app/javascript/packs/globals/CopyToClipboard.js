@@ -16,20 +16,18 @@ export default class CopyToClipboard {
 
   bindEventListeners() {
     this.clipboardButtons.forEach(button => {
-      button.addEventListener('mouseleave', this.clearTooltip);
-      button.addEventListener('blur', this.clearTooltip);
+      let title = button.getAttribute('title');
+      button.addEventListener('mouseleave', this.revertTooltipTitle.bind(this, title));
     });
   }
 
-  clearTooltip(event) {
-    event.currentTarget.removeAttribute('data-balloon-visible');
-    event.currentTarget.removeAttribute('data-balloon');
-    event.currentTarget.removeAttribute('data-balloon-pos');
+  revertTooltipTitle(title, event) {
+    setTimeout(() => {
+      event.target.setAttribute('title', title);
+    }, 380);
   }
 
   showTooltip(el) {
-    el.setAttribute('data-balloon-visible', true);
-    el.setAttribute('data-balloon', polyglot.t('base.copied'));
-    el.setAttribute('data-balloon-pos', 'up');
+    el.setAttribute('title', polyglot.t('base.copied'));
   }
 }

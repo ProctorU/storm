@@ -27,12 +27,15 @@
           ) %>" />
 
         <span class="input-group-btn">
-          <button class="btn btn-primary" type="button"
+          <button class="btn btn-primary icon-15" type="button"
+            title="<%= t('.action') %>"
+            data-toggle="tooltip"
+            data-placement="top-right"
             data-clipboard-text="<%= accept_user_invitation_url(
               invitation_token: params[:token]
             ) %>"
             data-behavior="copy-to-clipboard">
-            <%= t('.action') %>
+            <i data-feather="clipboard"></i>
           </button>
         </span>
       </div>
