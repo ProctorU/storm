@@ -1,18 +1,18 @@
 <div class="container">
-  <div class="auth auth-wide">
+  <div class="text-center my-5">
     <%= link_to(root_path) do %>
-      <%= image_tag("bolt.png", class: "auth-logo mx-auto d-block mb-3") %>
+      <%= image_tag("bolt.png", class: "d-block mx-auto  mb-4", width: 80) %>
     <% end %>
 
-    <h3 class="auth-title text-center mb-3">
-      <%= t('.header') %>
-    </h3>
-
-    <div class="card">
-      <div class="card-block">
+    <h2>Storm</h2>
+    <h3 class="o-75"><%= t('.header') %></h3>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card card-body mb-3">
         <%= form_for(resource, as: resource_name,
           url: registration_path(resource_name)) do |f| %>
-          <%= render("shared/flash") %>
+          <%= render("shared/flash/card") %>
 
           <div class="form-group">
             <%= f.label :email, class: "required" %>

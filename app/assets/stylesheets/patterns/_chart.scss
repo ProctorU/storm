@@ -1,11 +1,9 @@
-@import "base/base";
-
 .chart-bar {
-  fill: $brand-primary;
+  fill: theme-color("primary");
 }
 
 .chart-column {
-  fill: $gray-lightest;
+  fill: $gray-200;
 }
 
 .chart-axis {
@@ -13,7 +11,7 @@
   font-weight: 600;
 
   text {
-    fill: $gray-light;
+    fill: $gray-500;
   }
 
   path {
@@ -24,6 +22,6 @@
 .chart-axis path,
 .chart-axis line {
   fill: none;
-  stroke: $gray-lightest;
+  stroke: $gray-200;
   stroke-width: 0.125rem;
 }

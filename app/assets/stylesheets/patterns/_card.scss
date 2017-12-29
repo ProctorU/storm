@@ -1,11 +1,5 @@
 @import "base/base";
 
-.card {
-  border: none;
-  box-shadow: $box-shadow;
-  margin-bottom: 1rem;
-}
-
 a.card {
   color: inherit;
   position: relative;
@@ -16,35 +10,6 @@ a.card {
   transition: all $base-duration $base-timing;
 
   &:hover {
-    box-shadow: $box-shadow-hover;
     transform: translateY(-2px);
-  }
-}
-
-@include media-breakpoint-down(md) {
-  .card-deck {
-    display: block;
-
-    .card-link:not(:last-child) {
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
-}
-
-@include media-breakpoint-up(xs) {
-  .card-deck .card-link:not(:first-child) {
-    margin-left: 0;
-  }
-}
-
-.card-header {
-  background-color: $white;
-  padding-bottom: 1.5rem;
-  padding-top: 1.5rem;
-
-  .card-title {
-    font-size: 1rem;
-    margin: 0;
   }
 }

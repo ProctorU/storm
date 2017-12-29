@@ -4,7 +4,7 @@
   <td><%= user.formatted_time(:created_at) %></td>
 
   <td>
-    <span class="badge badge-<%= user.pending? ? 'default' : 'success' %>">
+    <span class="badge badge-<%= user.pending? ? 'secondary' : 'success' %>">
       <%= user.member_status_text %>
     </span>
   </td>
@@ -20,6 +20,7 @@
         <%= f.hidden_field(:email, value: f.object.email) %>
         <%= button_tag(class: "btn btn-link btn-sm icon-15",
           title: t('.invitation_link'),
+          data: { toggle: "tooltip", placement: "top-right" },
           type: "submit") do %>
           <i data-feather="mail"></i>
         <% end %>
@@ -36,6 +37,7 @@
       <%= f.hidden_field(:email, value: f.object.email) %>
       <%= button_tag(class: "btn btn-link btn-sm icon-15",
         title: t('.reset_password'),
+        data: { toggle: "tooltip", placement: "top-right" },
         type: "submit") do %>
         <i data-feather="lock"></i>
       <% end %>

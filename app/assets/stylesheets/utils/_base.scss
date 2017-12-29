@@ -1,5 +1,3 @@
-//= require utils/_border
-//= require utils/_icon
-//= require utils/_sizing
-//= require utils/_spacing
-//= require utils/_typography
+@import 'utils/border';
+@import 'utils/icon';
+@import 'utils/spacing';

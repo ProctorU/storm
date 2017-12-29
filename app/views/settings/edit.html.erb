@@ -2,12 +2,10 @@
   <h4 class="page-title"><%= t('.title') %></h4>
 </div>
 
-<div class="row">
-  <div class="col-md-6 offset-md-3">
-    <div class="card">
-      <div class="card-block">
-        <%= render("form", setting: @setting) %>
-      </div>
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card card-body mb-3">
+      <%= render("form", setting: @setting) %>
     </div>
   </div>
 </div>

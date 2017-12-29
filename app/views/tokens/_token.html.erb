@@ -7,6 +7,9 @@
 
   <td>
     <button class="btn btn-link btn-sm icon-15" type="button"
+      title="<%= t('.copy') %>"
+      data-toggle="tooltip"
+      data-placement="top-right"
       data-clipboard-text="<%= token.value %>"
       data-behavior="copy-to-clipboard">
       <i data-feather="clipboard"></i>

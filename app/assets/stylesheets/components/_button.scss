@@ -1,6 +1,0 @@
-@import "base/base";
-
-.btn-primary { @include button-variant-primary($btn-primary-bg, $white); }
-.btn-secondary { @include button-variant-primary($btn-secondary-bg, $btn-secondary-color); }
-.btn-info { @include button-variant-primary($btn-info-bg, $white); }
-.btn-danger { @include button-variant-primary($btn-danger-bg, $white); }

@@ -104,6 +104,7 @@ en:
       title: Let's add a new token
     token:
       confirm: Are you sure you want to revoke this token?
+      copy: Copy token to clipboard
       revoke: Revoke
   websites:
     up:

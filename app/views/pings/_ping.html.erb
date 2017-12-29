@@ -3,9 +3,9 @@
     <%= ping.formatted_time(:created_at) %>
   </p>
 
-  <div class="flex-1 hr-dots"></div>
+  <div class="flex-grow hr-dots"></div>
 
-  <p class="mb-0">
+  <p class="mb-0 lh-normal">
     <span class="badge <%= ping.status_badge %>">
       <%= ping.status_text %>
     </span>

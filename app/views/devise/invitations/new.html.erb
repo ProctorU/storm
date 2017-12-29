@@ -5,8 +5,8 @@
 <div class="row">
   <div class="col-sm-4 offset-sm-4">
     <%= link_to(users_path,
-      class: "card card-link") do %>
-      <div class="card-block text-muted text-center d-flex align-items-center justify-content-center">
+      class: "card card-link mb-3") do %>
+      <div class="card-body text-muted text-center d-flex align-items-center justify-content-center">
         <i class="mr-3" data-feather="arrow-left"></i>
         <h6 class="mb-0"><%= t('.head_back') %></h6>
       </div>
@@ -16,28 +16,26 @@
 
 <div class="row">
   <div class="col-md-6 offset-md-3">
-    <div class="card">
-      <div class="card-block">
-        <%= form_for(
-          resource,
-          as: resource_name,
-          url: invitation_path(resource_name),
-          html: { method: :post }
-        ) do |f| %>
+    <div class="card card-body mb-3">
+      <%= form_for(
+        resource,
+        as: resource_name,
+        url: invitation_path(resource_name),
+        html: { method: :post }
+      ) do |f| %>
 
-          <% resource.class.invite_key_fields.each do |field| %>
-            <div class="form-group">
-              <%= f.label(field) %>
-              <%= f.text_field(field, autofocus: true, class: "form-control") %>
-              <%= error_message_on(f.object, field) %>
-            </div>
-          <% end %>
-
-          <div class="actions">
-            <%= f.submit t(".submit_button"), class: "btn btn-primary" %>
+        <% resource.class.invite_key_fields.each do |field| %>
+          <div class="form-group">
+            <%= f.label(field) %>
+            <%= f.text_field(field, autofocus: true, class: "form-control") %>
+            <%= error_message_on(f.object, field) %>
           </div>
         <% end %>
-      </div>
+
+        <div class="actions">
+          <%= f.submit t(".submit_button"), class: "btn btn-primary" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
