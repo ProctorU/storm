@@ -7,7 +7,7 @@ end
 
 gem 'aws-sdk', '~> 2.10'
 gem 'attr_encrypted', '~> 3.0', github: 'attr-encrypted/attr_encrypted'
-gem 'bootstrap', '4.0.0.alpha6'
+gem 'bootstrap', '4.0.0.beta3'
 gem 'delayed_job_active_record', '~> 4.1.2'
 gem 'devise', '~> 4.3.0'
 gem 'devise_invitable', '~> 1.7', '>= 1.7.2'
