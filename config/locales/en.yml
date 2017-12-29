@@ -84,7 +84,28 @@ en:
       websites: Websites
       settings: Settings
       users: Users
+      tokens: Tokens
       sign_out: Sign out
+  tokens:
+    create:
+      success: >
+        %{name} has been successfully added.
+    destroy:
+      success: >
+        %{name} has been successfully revoked.
+    index:
+      add: Add token
+      created_by: Created by
+      last_used: Last used
+      name: Name
+      title: Your team's API tokens
+    new:
+      back: Back to tokens
+      title: Let's add a new token
+    token:
+      confirm: Are you sure you want to revoke this token?
+      copy: Copy token to clipboard
+      revoke: Revoke
   websites:
     up:
       first: "The storm has died down -- %{name} is back up :sun_with_face:"

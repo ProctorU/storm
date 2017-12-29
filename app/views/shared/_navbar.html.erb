@@ -1,10 +1,20 @@
-<nav class="navbar navbar-inverse bg-primary">
-  <ul class="navbar-nav">
-    <%= nav_link(t('.websites'), root_path) %>
-    <%= nav_link(t('.settings'), edit_settings_path) %>
-    <%= nav_link(t('.users'), users_path) %>
-    <% if user_signed_in? %>
-      <%= nav_link(t('.sign_out'), destroy_user_session_path, method: :delete) %>
-    <% end %>
-  </ul>
+<nav class="navbar navbar-light navbar-expand-lg bg-white">
+  <div class="container">
+    <div class="navbar-collapse">
+      <%= link_to(root_path, class: "navbar-brand") do %>
+        <%= image_tag("bolt.png", height: 30, alt: "Storm logo") %>
+        <span class="ml-2 h6">Storm</span>
+      <% end %>
+
+      <ul class="navbar-nav ml-auto">
+        <%= nav_link(t('.websites'), root_path) %>
+        <%= nav_link(t('.settings'), edit_settings_path) %>
+        <%= nav_link(t('.users'), users_path) %>
+        <%= nav_link(t('.tokens'), tokens_path) %>
+        <% if user_signed_in? %>
+          <%= nav_link(t('.sign_out'), destroy_user_session_path, method: :delete) %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </nav>

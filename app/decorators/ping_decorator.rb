@@ -1,7 +1,5 @@
 # PingDecorator
-class PingDecorator < Draper::Decorator
-  delegate_all
-
+class PingDecorator < ApplicationDecorator
   def successful?
     status == 1
   end
