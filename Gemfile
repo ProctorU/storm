@@ -29,8 +29,8 @@ group :test do
   gem 'minitest-rails-capybara'
   gem 'minitest-ci'
   gem 'mocha', '~> 1.3'
+  gem 'vcr', '~> 4.0'
   gem 'webmock', '~> 3.2'
-  gem 'vcr', '~> 3.0', '>= 3.0.3'
 end
 
 group :development, :test do
