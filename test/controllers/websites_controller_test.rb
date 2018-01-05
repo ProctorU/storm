@@ -2,6 +2,8 @@ require('test_helper')
 
 # WebsitesControllerTest
 class WebsitesControllerTest < ActionDispatch::IntegrationTest
+  include ActiveJob::TestHelper
+
   feature 'as as authenticated user' do
     before(:each) do
       @user = create(:user)
@@ -56,7 +58,7 @@ class WebsitesControllerTest < ActionDispatch::IntegrationTest
 
     test 'should delete destroy' do
       website = create(:website)
-      assert_difference('Website.count', -1) do
+      assert_enqueued_jobs(1) do
         delete(website_path(website))
       end
       assert_response(:redirect)
@@ -83,7 +85,7 @@ class WebsitesControllerTest < ActionDispatch::IntegrationTest
 
     test 'should not delete destroy' do
       website = create(:website)
-      assert_no_difference('Website.count') do
+      assert_enqueued_jobs(0) do
         delete(website_path(website))
       end
       assert_redirected_to(:new_user_registration)
