@@ -118,6 +118,9 @@ en:
     create:
       success: >
         %{name} has been successfully added.
+    destroy:
+      success: >
+        %{name} has been successfully destroyed.
     edit:
       title: Let's edit your website
     form:
@@ -138,6 +141,9 @@ en:
       load_more: Load more
     show:
       edit: Edit
+      destroy: Destroy
+      destroy_confirm: >
+        Are you sure you want to destroy %{name}?
       response_times: Response Times
       resource: ping
     update:
