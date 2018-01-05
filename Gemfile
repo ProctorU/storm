@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'attr_encrypted', '~> 3.0', github: 'attr-encrypted/attr_encrypted'
-gem 'aws-sdk', '~> 2.10'
+gem 'aws-sdk', '~> 3.0'
 gem 'delayed_job_active_record', '~> 4.1.2'
 gem 'devise', '~> 4.4.0'
 gem 'devise_invitable', '~> 1.7', '>= 1.7.2'
