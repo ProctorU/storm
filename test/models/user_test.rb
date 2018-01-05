@@ -25,4 +25,11 @@ class UserTest < ActiveSupport::TestCase
       @user.destroy
     end
   end
+
+  test 'reset_password_token!' do
+    @user.save
+    assert_nil(@user.reset_password_sent_at)
+    assert_not_nil(@user.reset_password_token!)
+    assert_not_nil(@user.reload.reset_password_sent_at)
+  end
 end
