@@ -2,6 +2,8 @@
 class WebsitesController < ApplicationController
   include PaginatableConcern
 
+  before_action(:set_website, only: %w(show edit update destroy))
+
   def index
     @websites = Website.active.paginate(params).decorate
 
@@ -27,17 +29,12 @@ class WebsitesController < ApplicationController
   end
 
   def show
-    @website = Website.find(params[:id])
     @pings = @website.monthly_pings.paginate(params).decorate
   end
 
-  def edit
-    @website = Website.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @website = Website.find(params[:id])
-
     if @website.update(website_params)
       flash[:success] = t('.success', name: @website.name)
       redirect_to(root_path)
@@ -46,7 +43,17 @@ class WebsitesController < ApplicationController
     end
   end
 
+  def destroy
+    @website.destroy
+    flash[:success] = t('.success', name: @website.name)
+    redirect_to(root_path)
+  end
+
   private
+
+  def set_website
+    @website = Website.find(params[:id])
+  end
 
   def website_params
     params.require(:website).permit(

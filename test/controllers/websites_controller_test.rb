@@ -53,6 +53,14 @@ class WebsitesControllerTest < ActionDispatch::IntegrationTest
       get(website_path(website))
       assert_response(:success)
     end
+
+    test 'should delete destroy' do
+      website = create(:website)
+      assert_difference('Website.count', -1) do
+        delete(website_path(website))
+      end
+      assert_response(:redirect)
+    end
   end
 
   feature 'as an unauthenticated user' do
@@ -70,6 +78,14 @@ class WebsitesControllerTest < ActionDispatch::IntegrationTest
       website = create(:website)
 
       get(website_path(website))
+      assert_redirected_to(:new_user_registration)
+    end
+
+    test 'should not delete destroy' do
+      website = create(:website)
+      assert_no_difference('Website.count') do
+        delete(website_path(website))
+      end
       assert_redirected_to(:new_user_registration)
     end
   end

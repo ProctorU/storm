@@ -34,7 +34,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources(:websites, only: %w(index new create show edit update)) do
+  resources(:websites) do
     scope(module: :websites) do
       namespace(:charts) do
         resources(:response_time, only: %w(index), path: 'response-time')
