@@ -44,7 +44,7 @@ class WebsitesController < ApplicationController
   end
 
   def destroy
-    @website.destroy
+    WebsiteDestroyerJob.perform_later(@website)
     flash[:success] = t('.success', name: @website.name)
     redirect_to(root_path)
   end

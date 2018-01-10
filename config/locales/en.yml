@@ -120,7 +120,8 @@ en:
         %{name} has been successfully added.
     destroy:
       success: >
-        %{name} has been successfully destroyed.
+        %{name} has been successfully destroyed. It may take a few minutes to
+        completely finish removing the website and the associated pings.
     edit:
       title: Let's edit your website
     form:
