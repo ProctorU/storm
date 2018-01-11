@@ -8,7 +8,7 @@ module Users
     layout('unauthenticated', only: %w(edit update))
 
     def create
-      if @token = @user.send_reset_password_instructions
+      if @token = @user.reset_password_token!
         redirect_to(after_sending_reset_password_instructions_path_for(@user))
       else
         flash[:danger] = t('.create.fail')
