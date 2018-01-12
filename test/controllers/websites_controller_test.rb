@@ -4,7 +4,7 @@ require('test_helper')
 class WebsitesControllerTest < ActionDispatch::IntegrationTest
   include ActiveJob::TestHelper
 
-  feature 'as as authenticated user' do
+  feature 'as an authenticated user' do
     before(:each) do
       @user = create(:user)
       @website = create(:website)
