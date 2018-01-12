@@ -87,6 +87,8 @@ en:
       tokens: Tokens
       sign_out: Sign out
   tokens:
+    api:
+      invalid: Invalid or missing token
     create:
       success: >
         %{name} has been successfully added.

@@ -18,6 +18,12 @@ Rails.application.routes.draw do
     sign_up: 'sign-up'
   }
 
+  namespace(:api) do
+    namespace(:v1) do
+      resources(:websites, only: %w(index))
+    end
+  end
+
   resource(:settings, only: %w(edit update))
 
   resources(:tokens, only: %w(index new create destroy))
