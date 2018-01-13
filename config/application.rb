@@ -24,5 +24,13 @@ module Storm
 
     # Use DelayedJob as adapter for ActiveJob.
     config.active_job.queue_adapter = :delayed_job
+
+    # Allow GET requests from any origin for API.
+    config.middleware.insert_before(0, Rack::Cors) do
+      allow do
+        origins '*'
+        resource '*', headers: :any, methods: [:get]
+      end
+    end
   end
 end
