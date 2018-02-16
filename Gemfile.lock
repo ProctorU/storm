@@ -101,7 +101,7 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
-    devise_invitable (1.7.2)
+    devise_invitable (1.7.3)
       actionmailer (>= 4.1.0)
       devise (>= 4.0.0)
     draper (3.0.1)
@@ -300,7 +300,7 @@ DEPENDENCIES
   capybara (~> 2.18)
   delayed_job_active_record (~> 4.1.2)
   devise (~> 4.4.1)
-  devise_invitable (~> 1.7, >= 1.7.2)
+  devise_invitable (~> 1.7)
   draper (~> 3.0)
   factory_bot_rails (~> 4.8.2)
   faker (~> 1.8)
