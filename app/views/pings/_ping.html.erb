@@ -1,11 +1,11 @@
 <div class="d-flex justify-content-between mb-2 mb-last">
-  <p class="mb-0 h6 lh-normal">
+  <p class="mb-0">
     <%= ping.formatted_time(:created_at) %>
   </p>
 
   <div class="flex-grow hr-dots"></div>
 
-  <p class="mb-0 lh-normal">
+  <p class="mb-0">
     <span class="badge <%= ping.status_badge %>">
       <%= ping.status_text %>
     </span>

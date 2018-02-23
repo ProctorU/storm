@@ -1,5 +1,6 @@
-<div class="page-heading">
-  <h4 class="page-title"><%= t('.title') %></h4>
+<div class="page-header">
+  <h4 class="page-title"><%= t(".title") %></h4>
+  <h5 class="page-subtitle"><%= t(".subtitle") %></h5>
 </div>
 
 <div class="row">
@@ -27,7 +28,7 @@
             reset_password_token: params[:token]
           ) %>" />
 
-        <span class="input-group-btn">
+        <div class="input-group-append">
           <button class="btn btn-primary icon-15" type="button"
             title="<%= t('.action') %>"
             data-toggle="tooltip"
@@ -39,7 +40,7 @@
             data-behavior="copy-to-clipboard">
             <i data-feather="clipboard"></i>
           </button>
-        </span>
+        </div>
       </div>
     </div>
   </div>

@@ -52,7 +52,8 @@ en:
       welcome_message: "Starting to track %{name}. First ping: *%{status}*."
   settings:
     edit:
-      title: Let's update your settings
+      title: Your settings
+      subtitle: Let's update your configuration
     form:
       action: Update Settings
       aws_info: >
@@ -100,10 +101,12 @@ en:
       created_by: Created by
       last_used: Last used
       name: Name
-      title: Your team's API tokens
+      title: Tokens
+      subtitle: Manage your API tokens
     new:
       back: Back to tokens
-      title: Let's add a new token
+      title: Add token
+      subtitle: Create a new team token
     token:
       confirm: Are you sure you want to revoke this token?
       copy: Copy token to clipboard
@@ -116,6 +119,7 @@ en:
     charts:
       response_time:
         index:
+          subtitle: Aggregated response time data for %{website_name}
           title: Response Times
     create:
       success: >
@@ -125,7 +129,8 @@ en:
         %{name} has been successfully destroyed. It may take a few minutes to
         completely finish removing the website and the associated pings.
     edit:
-      title: Let's edit your website
+      subtitle: Let's edit your website
+      title: Edit %{website_name}
     form:
       aws_info: AWS Information
       aws_instance_id: AWS Instance ID
@@ -136,9 +141,11 @@ en:
     index:
       add: Add website
       resource: website
-      title: Our websites
+      title: Websites
+      subtitle: Insights into your websites
     new:
       back: Back to websites
+      subtitle: Add website
       title: Let's add a new website
     next_page:
       load_more: Load more
@@ -149,6 +156,7 @@ en:
         Are you sure you want to destroy %{name}?
       response_times: Response Times
       resource: ping
+      subtitle: Insights into your website
     update:
       success: >
         %{name} has been successfully updated.
@@ -161,24 +169,27 @@ en:
       email: Email
       invite: Invite team member
       status: Status
-      title: Here's your team
+      subtitle: Insights into your team
+      title: Your team
     passwords:
       create:
         fail: You have unsuccessfully generated the Reset Password URL.
       instructions:
         index:
           action: Copy link to clipboard
-          title: Instructions
           back: Back to users
           instructions: >
             You have successfully generated the Reset Password URL for
             <code>%{email}</code>. Since we do not deliver emails,
             here is a fancy link for them.
+          subtitle: Reset your password
+          title: Instructions
     invitations:
       instructions:
         index:
           action: Copy link to clipboard
           title: Instructions
+          subtitle: Details on your invitation
           back: Back to users
           instructions: >
             You have successfully invited <code>%{email}</code>. Since
