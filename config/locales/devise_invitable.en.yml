@@ -9,7 +9,8 @@ en:
       no_invitations_remaining: "No invitations remaining"
       invitation_removed: "Your invitation was removed."
       new:
-        header: "Send an invitation"
+        title: Add invitation
+        subtitle: Invite another team member
         head_back: Head back
         submit_button: "Send an invitation"
       edit:
