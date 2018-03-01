@@ -120,13 +120,13 @@ GEM
       railties (>= 3.0.0)
     faker (1.8.7)
       i18n (>= 0.7)
-    ffi (1.9.22)
+    ffi (1.9.23)
     foreman (0.84.0)
       thor (~> 0.19.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashdiff (0.3.7)
-    hootstrap (0.1.7)
+    hootstrap (0.2.0)
       bootstrap (~> 4.0.0.beta)
       rails (>= 4.2.0)
       sass-rails
@@ -193,7 +193,7 @@ GEM
     rack-cors (1.0.2)
     rack-proxy (0.6.3)
       rack
-    rack-test (0.8.2)
+    rack-test (0.8.3)
       rack (>= 1.0, < 3)
     rails (5.1.5)
       actioncable (= 5.1.5)
@@ -305,7 +305,7 @@ DEPENDENCIES
   factory_bot_rails (~> 4.8.2)
   faker (~> 1.8)
   foreman
-  hootstrap (~> 0.1)
+  hootstrap (~> 0.2)
   kaminari (~> 1.1)
   listen (>= 3.0.5, < 3.2)
   local_time (~> 2.0)
