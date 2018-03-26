@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/attr-encrypted/attr_encrypted.git
-  revision: e19445a9ae38ed9a55608d28a80e32126f30efd1
+  revision: 55839afda282d9436b49fcc164b7a8e70da23bce
   specs:
-    attr_encrypted (3.0.3)
+    attr_encrypted (3.1.0)
       encryptor (~> 3.0.0)
 
 GEM
@@ -294,7 +294,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
-  attr_encrypted (~> 3.0)!
+  attr_encrypted (~> 3.1)!
   aws-sdk (~> 2.10)
   byebug
   capybara (~> 2.18)

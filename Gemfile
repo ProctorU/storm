@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'active_model_serializers', '~> 0.10.0'
-gem 'attr_encrypted', '~> 3.0', github: 'attr-encrypted/attr_encrypted'
+gem 'attr_encrypted', '~> 3.1', github: 'attr-encrypted/attr_encrypted'
 gem 'aws-sdk', '~> 2.10'
 gem 'delayed_job_active_record', '~> 4.1.2'
 gem 'devise', '~> 4.4.3'
