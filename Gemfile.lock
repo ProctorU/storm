@@ -177,7 +177,7 @@ GEM
       minitest-capybara (~> 0.8)
       minitest-metadata (~> 0.6)
       minitest-rails (~> 3.0)
-    mocha (1.4.0)
+    mocha (1.5.0)
       metaclass (~> 0.0.1)
     nio4r (2.3.0)
     nokogiri (1.8.2)
@@ -311,7 +311,7 @@ DEPENDENCIES
   local_time (~> 2.0)
   minitest-ci
   minitest-rails-capybara
-  mocha (~> 1.4)
+  mocha (~> 1.5)
   paranoia (~> 2.4)
   pg (~> 0.18)
   puma (~> 3.11)
