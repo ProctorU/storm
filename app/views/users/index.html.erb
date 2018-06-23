@@ -4,7 +4,7 @@
 </div>
 
 <div class="row">
-  <div class="col-sm-4 offset-sm-4">
+  <div class="col-md-4 offset-md-4">
     <%= link_to(new_user_invitation_path,
       class: "card card-link mb-3") do %>
       <div class="card-body text-muted text-center d-flex align-items-center justify-content-center">
@@ -16,7 +16,7 @@
 </div>
 
 <div class="row justify-content-center">
-  <div class="col-md-8">
+  <div class="col-lg-8">
     <div class="card card-body mb-3">
       <div class="table-responsive">
         <table class="table table-border-around mb-0">
@@ -25,7 +25,7 @@
               <th><%= t('.email') %></th>
               <th><%= t('.created_on') %></th>
               <th><%= t('.status') %></th>
-              <th></th>
+              <th style="min-width: 140px;"></th>
             </tr>
           </thead>
           <tbody>
