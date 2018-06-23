@@ -15,7 +15,10 @@ class User < ApplicationRecord
     set_reset_password_token # devise method
   end
 
-  def active_for_authentication? # devise method
-    super and !deleted?
+  # Override Devise method.
+  #
+  # Ensure a user cannot sign in if they have been deleted.
+  def active_for_authentication?
+    super && !deleted?
   end
 end
