@@ -28,7 +28,7 @@ Rails.application.routes.draw do
 
   resources(:tokens, only: %w(index new create destroy))
 
-  resources(:users, only: %w(index))
+  resources(:users, only: %w(index destroy))
 
   namespace(:users) do
     namespace(:invitations) do

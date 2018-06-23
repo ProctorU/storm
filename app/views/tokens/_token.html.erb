@@ -3,7 +3,7 @@
 
   <td><%= token.created_by.email %></td>
 
-  <td><%= token.formatted_time(:last_used_at) %></td>
+  <td><%= token.formatted_time(:last_used_at) || t('.never') %></td>
 
   <td>
     <button class="btn btn-link btn-sm icon-15" type="button"
