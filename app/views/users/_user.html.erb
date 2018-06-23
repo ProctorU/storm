@@ -15,7 +15,7 @@
         user,
         as: :user,
         url: invitation_path(:user),
-        html: { method: :post }
+        html: { class: "d-inline-block align-middle", method: :post }
       ) do |f| %>
         <%= f.hidden_field(:email, value: f.object.email) %>
         <%= button_tag(class: "btn btn-link btn-sm icon-15",
@@ -26,14 +26,12 @@
         <% end %>
       <% end %>
     <% end %>
-  </td>
 
-  <td>
     <%= form_for(
       user,
       as: :user,
       url: password_path(:user),
-      html: { method: :post }) do |f| %>
+      html: { class: "d-inline-block align-middle", method: :post }) do |f| %>
       <%= f.hidden_field(:email, value: f.object.email) %>
       <%= button_tag(class: "btn btn-link btn-sm icon-15",
         title: t('.reset_password'),
@@ -41,6 +39,22 @@
         type: "submit") do %>
         <i data-feather="lock"></i>
       <% end %>
+    <% end %>
+
+    <% unless current_user.eql?(user) %>
+      <div class="d-inline-block align-middle">
+        <%= link_to(user_url(user),
+          class: "btn btn-link btn-sm icon-15 text-danger",
+          method: :delete, title: t('.destroy_link'),
+          data: {
+            toggle: "tooltip",
+            placement: "top-right",
+            prompt: t('.destroy_confirm', email: user.email)
+          }
+        ) do %>
+          <i data-feather="trash" class="pointerless"></i>
+        <% end %>
+      </div>
     <% end %>
   </td>
 </tr>

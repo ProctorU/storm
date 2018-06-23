@@ -6,7 +6,11 @@ module Api
       private
 
       def authenticate_token!
-        return unauthenticated unless token?
+        if token?
+          token.touch(:last_used_at)
+        else
+          unauthenticated
+        end
       end
 
       def unauthenticated
@@ -15,8 +19,12 @@ module Api
         }, status: 401
       end
 
+      def token
+        @token ||= Token.find_by(value: token_header)
+      end
+
       def token?
-        Token.find_by(value: token_header).present?
+        token.present?
       end
 
       def token_header

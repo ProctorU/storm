@@ -98,6 +98,7 @@ en:
         %{name} has been successfully revoked.
     index:
       add: Add token
+      copy: Copy
       created_by: Created by
       last_used: Last used
       name: Name
@@ -110,6 +111,7 @@ en:
     token:
       confirm: Are you sure you want to revoke this token?
       copy: Copy token to clipboard
+      never: Never
       revoke: Revoke
   websites:
     up:
@@ -164,6 +166,10 @@ en:
     member: member
     pending: pending
 
+    destroy:
+      success: >
+        %{email} has been successfully destroyed.
+
     index:
       created_on: Created on
       email: Email
@@ -200,5 +206,8 @@ en:
           If you already have an account, please sign in. Otherwise, you
           must be invited to join Storm.
     user:
+      destroy_confirm: >
+        Are you sure you want to destroy %{email}?
+      destroy_link: Delete user
       invitation_link: Invitation Link
       reset_password: Reset password

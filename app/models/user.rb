@@ -14,4 +14,8 @@ class User < ApplicationRecord
   def reset_password_token!
     set_reset_password_token # devise method
   end
+
+  def active_for_authentication? # devise method
+    super and !deleted?
+  end
 end

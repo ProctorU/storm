@@ -8,7 +8,7 @@ end
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'attr_encrypted', '~> 3.1', github: 'attr-encrypted/attr_encrypted'
 gem 'aws-sdk', '~> 2.10'
-gem 'delayed_job_active_record', '~> 4.1.2'
+gem 'delayed_job_active_record', '~> 4.1.3'
 gem 'devise', '~> 4.4.3'
 gem 'devise_invitable', '~> 1.7'
 gem 'draper', '~> 3.0'
