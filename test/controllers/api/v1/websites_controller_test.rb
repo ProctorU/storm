@@ -28,6 +28,30 @@ module Api
           )
 
           assert_response(201)
+          assert response_json[:id].present?
+          assert response_json[:name].present?
+          assert response_json[:url].present?
+        end
+
+        test 'should post create and return errors when invalid' do
+          params = {
+            website: {
+              name: '',
+              url: 'https://proctoru.com'
+            }
+          }
+          post(
+            api_v1_websites_path,
+            params: params,
+            headers: { 'X-AUTHORIZATION-TOKEN' => token.value }
+          )
+
+          assert_response(400)
+          assert response_json[:status].present?
+          assert response_json[:message].present?
+          assert response_json[:errors].present?
+          assert_includes response_json[:message], 'Invalid Attribute'
+          assert_equal 1, response_json[:errors].size
         end
       end
 
