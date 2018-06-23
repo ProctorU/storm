@@ -32,7 +32,7 @@ group :test do
   gem 'minitest-ci'
   gem 'mocha', '~> 1.4'
   gem 'vcr', '~> 4.0'
-  gem 'webmock', '~> 3.3'
+  gem 'webmock', '~> 3.4'
 end
 
 group :development, :test do
