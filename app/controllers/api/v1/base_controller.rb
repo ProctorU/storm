@@ -1,6 +1,8 @@
 module Api
   module V1
     class BaseController < ActionController::API
+      include Daredevil
+
       before_action(:authenticate_token!)
 
       private
