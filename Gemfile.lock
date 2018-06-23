@@ -130,7 +130,7 @@ GEM
       bootstrap (~> 4.0.0.beta)
       rails (>= 4.2.0)
       sass-rails
-    i18n (1.0.0)
+    i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     jmespath (1.3.1)
     jsonapi-renderer (0.2.0)
@@ -189,7 +189,7 @@ GEM
     popper_js (1.12.9)
     public_suffix (3.0.2)
     puma (3.11.4)
-    rack (2.0.4)
+    rack (2.0.5)
     rack-cors (1.0.2)
     rack-proxy (0.6.4)
       rack
@@ -270,7 +270,7 @@ GEM
     vcr (4.0.0)
     warden (1.2.7)
       rack (>= 1.0)
-    web-console (3.6.0)
+    web-console (3.6.2)
       actionview (>= 5.0)
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
