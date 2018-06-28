@@ -1,9 +1,11 @@
 module Api
   module V1
     class WebsitesController < BaseController
+      before_action :set_website, only: %w(update destroy)
+
       def index
         render(
-          json: Website.active.decorate,
+          json: Website.decorate,
           each_serializer: WebsiteSerializer
         )
       end
@@ -18,7 +20,24 @@ module Api
         end
       end
 
+      def update
+        if @website.update(website_params)
+          respond_with @website, status: 200
+        else
+          respond_with @website, status: 400
+        end
+      end
+
+      def destroy
+        @website.destroy
+        head :ok
+      end
+
       private
+
+      def set_website
+        @website = Website.find(params[:id])
+      end
 
       def website_params
         params.require(:website).permit(
