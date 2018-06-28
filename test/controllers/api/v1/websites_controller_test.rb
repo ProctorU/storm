@@ -18,7 +18,8 @@ module Api
           params = {
             website: {
               name: 'Testing Website',
-              url: 'https://proctoru.com'
+              url: 'https://proctoru.com',
+              active: true
             }
           }
           post(
@@ -31,6 +32,28 @@ module Api
           assert response_json[:id].present?
           assert response_json[:name].present?
           assert response_json[:url].present?
+          assert response_json[:active]
+        end
+
+        test 'should post create and create inactive' do
+          params = {
+            website: {
+              name: 'Testing Website',
+              url: 'https://proctoru.com',
+              active: false
+            }
+          }
+          post(
+            api_v1_websites_path,
+            params: params,
+            headers: { 'X-AUTHORIZATION-TOKEN' => token.value }
+          )
+
+          assert_response(201)
+          assert response_json[:id].present?
+          assert response_json[:name].present?
+          assert response_json[:url].present?
+          assert_not response_json[:active]
         end
 
         test 'should post create and return errors when invalid' do

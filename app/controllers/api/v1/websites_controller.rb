@@ -23,7 +23,7 @@ module Api
       def website_params
         params.require(:website).permit(
           :name, :url, :basic_auth_username, :basic_auth_password,
-          :aws_instance_id, :aws_region
+          :active, :aws_instance_id, :aws_region
         )
       end
     end
