@@ -17,18 +17,6 @@ module Users
         end
       end
 
-      test 'should invite user that was previously deleted' do
-        user = create(:user)
-        user.destroy
-        @params[:user][:email] = user.email
-
-        assert_not_nil(user.reload.deleted_at)
-        assert_no_difference('User.unscoped.size') do
-          post(user_invitation_path, params: @params)
-        end
-        assert_nil(user.reload.deleted_at)
-      end
-
       test 'should not invite user with bad email' do
         assert_no_difference('User.unscoped.size') do
           post(user_invitation_path, params: bad_params)

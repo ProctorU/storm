@@ -1,6 +1,5 @@
 class Ping < ApplicationRecord
   include Paginatable
-  acts_as_paranoid
 
   attr_accessor(:skip_callbacks)
 

@@ -15,9 +15,9 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     test 'should delete destroy' do
       other_user = create(:user)
 
-      assert_nil(other_user.deleted_at)
-      delete(user_url(other_user))
-      assert_not_nil(other_user.reload.deleted_at)
+      assert_difference('User.count', -1) do
+        delete(user_url(other_user))
+      end
 
       assert_not_empty(flash[:success])
       assert_response(:redirect)
