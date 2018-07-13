@@ -4,6 +4,8 @@ class Website < ApplicationRecord
 
   VALID_URL_REGEX = /\A#{URI::regexp(['http', 'https'])}\z/
 
+  acts_as_paranoid
+
   has_many :pings, dependent: :destroy
   has_many :recent_pings, -> { limit(5) }, class_name: 'Ping'
   has_many :daily_pings, -> { limit(1_440) }, class_name: 'Ping'
