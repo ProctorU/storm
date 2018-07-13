@@ -128,7 +128,7 @@ GEM
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashdiff (0.3.7)
-    hootstrap (0.3.2)
+    hootstrap (0.4.0)
       bootstrap (~> 4.0.0)
       rails (>= 4.2.0)
       sass-rails
@@ -308,7 +308,7 @@ DEPENDENCIES
   factory_bot_rails (~> 4.10.0)
   faker (~> 1.9)
   foreman
-  hootstrap (~> 0.3.2)
+  hootstrap (~> 0.4.0)
   kaminari (~> 1.1)
   listen (>= 3.0.5, < 3.2)
   local_time (~> 2.0)
