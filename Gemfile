@@ -40,7 +40,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.18'
   gem 'factory_bot_rails', '~> 4.10.0'
-  gem 'faker', '~> 1.8'
+  gem 'faker', '~> 1.9'
   gem 'selenium-webdriver'
 end
 
