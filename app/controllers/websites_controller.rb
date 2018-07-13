@@ -29,7 +29,7 @@ class WebsitesController < ApplicationController
   end
 
   def show
-    @pings = @website.monthly_pings.paginate(params).decorate
+    @pings = @website.paginatable_pings.paginate(params).decorate
   end
 
   def edit; end
