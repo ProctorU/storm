@@ -1,8 +1,8 @@
 class RemoveDeletedAtFromTables < ActiveRecord::Migration[5.1]
   def up
     destroy_deleted_users
-    destroy_deleted_websites
     destroy_deleted_pings
+    destroy_deleted_websites
 
     remove_column(:users, :deleted_at)
     remove_column(:websites, :deleted_at)
@@ -26,11 +26,11 @@ class RemoveDeletedAtFromTables < ActiveRecord::Migration[5.1]
     User.where.not(deleted_at: nil).destroy_all
   end
 
-  def destroy_deleted_websites
-    Website.where.not(deleted_at: nil).delete_all
-  end
-
   def destroy_deleted_pings
     Ping.where.not(deleted_at: nil).delete_all
+  end
+
+  def destroy_deleted_websites
+    Website.where.not(deleted_at: nil).delete_all
   end
 end
