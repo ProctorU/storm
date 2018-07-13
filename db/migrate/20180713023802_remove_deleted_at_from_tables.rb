@@ -5,8 +5,8 @@ class RemoveDeletedAtFromTables < ActiveRecord::Migration[5.1]
     destroy_deleted_websites
 
     remove_column(:users, :deleted_at)
-    remove_column(:websites, :deleted_at)
     remove_column(:pings, :deleted_at)
+    remove_column(:websites, :deleted_at)
   end
 
   def down
