@@ -17,9 +17,7 @@ class Website < ApplicationRecord
   before_create(:set_ssl)
   after_commit(:create_ping, on: :create)
 
-  default_scope { undeleted }
   scope(:active, -> { where(active: true) })
-  scope(:undeleted, -> { where(deleted_at: nil) })
 
   def basic_auth?
     [basic_auth_username, basic_auth_password].all?(&:present?)
