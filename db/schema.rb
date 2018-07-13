@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180114164303) do
+ActiveRecord::Schema.define(version: 20180713023802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,9 +37,7 @@ ActiveRecord::Schema.define(version: 20180114164303) do
     t.integer "response_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "deleted_at"
     t.index ["created_at"], name: "index_pings_on_created_at"
-    t.index ["deleted_at"], name: "index_pings_on_deleted_at"
     t.index ["website_id"], name: "index_pings_on_website_id"
   end
 
@@ -91,9 +89,7 @@ ActiveRecord::Schema.define(version: 20180114164303) do
     t.string "invited_by_type"
     t.integer "invited_by_id"
     t.integer "invitations_count", default: 0
-    t.datetime "deleted_at"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
-    t.index ["deleted_at"], name: "index_users_on_deleted_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
     t.index ["invitations_count"], name: "index_users_on_invitations_count"
@@ -114,9 +110,7 @@ ActiveRecord::Schema.define(version: 20180114164303) do
     t.boolean "rebooting", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "deleted_at"
     t.index ["active"], name: "index_websites_on_active"
-    t.index ["deleted_at"], name: "index_websites_on_deleted_at"
     t.index ["name"], name: "index_websites_on_name"
     t.index ["url"], name: "index_websites_on_url"
   end
