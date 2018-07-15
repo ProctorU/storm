@@ -121,7 +121,7 @@ en:
     charts:
       response_time:
         index:
-          subtitle: Aggregated response time data for %{website_name}
+          subtitle: Average response times for %{website_name}
           title: Response Times
     create:
       success: >
@@ -162,6 +162,12 @@ en:
     update:
       success: >
         %{name} has been successfully updated.
+  welcome:
+    index:
+      title: Meet Storm
+      subtitle: >
+        An open-source and internationalized platform for self-hosted
+        app monitoring with Slack notifications, APIs, and more.
   users:
     member: member
     pending: pending

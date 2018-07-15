@@ -1,39 +1,32 @@
-<div class="welcome text-center">
-  <div class="container">
-    <div class="col-md-8 offset-md-2">
-      <div class="welcome-heading">
-        <%= image_tag("bolt.png", class: "welcome-logo mb-3") %>
+<div class="container">
+  <div class="page-header">
+    <%= image_tag("welcome/icon.png", class: "d-block mx-auto mb-4", width: 50) %>
 
-        <h1 class="welcome-title">Meet Storm</h1>
+    <h4 class="page-title"><%= t(".title") %></h4>
+    <h5 class="page-subtitle w-50 w-md-100 m-auto"><%= t(".subtitle") %></h5>
 
-        <%= render("shared/flash/card") %>
+    <div class="mt-4">
+      <%= link_to("Source code", "https://github.com/ProctorU/storm",
+        class: "btn btn-secondary") %>
 
-        <h4 class="welcome-subtitle mb-4">
-          Storm is a 100% open-source and internationalized platform
-          that provides a self-hosted monitoring service to your web apps
-          with Slack notifications, AWS server reboots, and more.
-        </h4>
+      <a href="https://heroku.com/deploy?template=https://github.com/ProctorU/storm"
+        class="btn btn-primary">
+        Deploy to Heroku
+      </a>
 
-        <div class="mb-5">
-          <%= link_to("Source code", "https://github.com/ProctorU/storm",
-            class: "btn btn-secondary") %>
+      <% if User.any? %>
+        <%= link_to("Sign in", new_user_session_path,
+          class: "btn btn-outline-secondary") %>
+      <% else %>
+      <%= link_to("Setup your account", new_user_registration_path,
+        class: "btn btn-outline-secondary") %>
+      <% end %>
+    </div>
+  </div>
 
-          <a href="https://heroku.com/deploy?template=https://github.com/ProctorU/storm"
-            class="btn btn-primary">
-            Deploy to Heroku
-          </a>
-
-          <% if User.any? %>
-            <%= link_to("Sign in", new_user_session_path,
-              class: "btn btn-outline-secondary") %>
-          <% else %>
-          <%= link_to("Setup your account", new_user_registration_path,
-            class: "btn btn-outline-secondary") %>
-          <% end %>
-        </div>
-
-        <%= image_tag("welcome/mockup.png", class: "welcome-mockup mb-5") %>
-      </div>
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <%= image_tag("welcome/mockup.png", class: "mb-3 rounded img-fluid shadow") %>
     </div>
   </div>
 </div>
