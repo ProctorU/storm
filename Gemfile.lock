@@ -188,7 +188,7 @@ GEM
     pg (0.21.0)
     popper_js (1.12.9)
     public_suffix (3.0.2)
-    puma (3.11.4)
+    puma (3.12.0)
     rack (2.0.5)
     rack-cors (1.0.2)
     rack-proxy (0.6.4)
@@ -314,7 +314,7 @@ DEPENDENCIES
   minitest-rails-capybara
   mocha (~> 1.4)
   pg (~> 0.18)
-  puma (~> 3.11)
+  puma (~> 3.12)
   rack-cors (~> 1.0, >= 1.0.2)
   rails (~> 5.1.6)
   ruby-progressbar (~> 1.9)
