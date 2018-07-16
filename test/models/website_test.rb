@@ -43,4 +43,22 @@ class WebsiteTest < ActiveSupport::TestCase
     assert_includes(Website.active, create(:website))
     assert_not_includes(Website.active, create(:website, :inactive))
   end
+
+  test 'destroys ping job when inactive' do
+    @website.save
+    @website.stubs(:job).returns(Delayed::Job.create(handler: "Website/#{@website.id}"))
+
+    assert_difference('Delayed::Job.count', -1) do
+      @website.update(active: false)
+    end
+  end
+
+  test 'creates ping job when active' do
+    @website.save
+    @website.update_column(:active, false)
+
+    assert_enqueued_jobs(1) do
+      @website.update(active: true)
+    end
+  end
 end

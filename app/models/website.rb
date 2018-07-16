@@ -16,11 +16,16 @@ class Website < ApplicationRecord
 
   before_create(:set_ssl)
   after_commit(:create_ping, on: :create)
+  after_commit(:check_pinger_job, on: :update, if: :saved_change_to_active?)
 
   scope(:active, -> { where(active: true) })
 
   def basic_auth?
     [basic_auth_username, basic_auth_password].all?(&:present?)
+  end
+
+  def job
+    Delayed::Job.where('handler LIKE ?', "%Website/#{id}%").first
   end
 
   private
@@ -33,5 +38,13 @@ class Website < ApplicationRecord
 
   def create_ping
     PingerJob.perform_later(self)
+  end
+
+  def check_pinger_job
+    if active?
+      create_ping
+    else
+      job.destroy
+    end
   end
 end
