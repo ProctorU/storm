@@ -33,7 +33,10 @@ module Storm
       end
     end
 
-    # https://github.com/rails/rails/issues/31324
+    # This is necessary so Rails doesn't throw an
+    # 'uninitialized constant Minitest::Rails::TestUnit' error on tests
+    #
+    # More info: https://github.com/rails/rails/issues/31324
     if Rails.env.test? && ActionPack::VERSION::STRING >= '5.2.0'
       Minitest::Rails::TestUnit = Rails::TestUnit
     end
