@@ -14,7 +14,8 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-default: &default
+
+shared:
   adapter: postgresql
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
@@ -22,7 +23,6 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
   database: storm_development
 
   # The specified database role being used to connect to postgres.
@@ -56,7 +56,6 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
   database: storm_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -79,7 +78,6 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
   database: storm_production
   username: storm
   password: <%= ENV['STORM_DATABASE_PASSWORD'] %>

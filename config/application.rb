@@ -32,5 +32,10 @@ module Storm
         resource '*', headers: :any, methods: [:get]
       end
     end
+
+    # https://github.com/rails/rails/issues/31324
+    if Rails.env.test? && ActionPack::VERSION::STRING >= '5.2.0'
+      Minitest::Rails::TestUnit = Rails::TestUnit
+    end
   end
 end
