@@ -1,7 +1,7 @@
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'minitest/rails/capybara'
-require 'mocha/test_unit'
+require 'mocha/minitest'
 
 class ActiveSupport::TestCase
   include FactoryBot::Syntax::Methods
