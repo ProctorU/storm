@@ -60,6 +60,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    archive-zip (0.11.0)
+      io-like (~> 0.3.0)
     arel (9.0.0)
     autoprefixer-rails (9.2.1)
       execjs
@@ -73,6 +75,8 @@ GEM
     aws-sigv4 (1.0.1)
     bcrypt (3.1.12)
     bindex (0.5.0)
+    bootsnap (1.3.1)
+      msgpack (~> 1.0)
     bootstrap (4.0.0)
       autoprefixer-rails (>= 6.0.3)
       popper_js (>= 1.12.9, < 2)
@@ -93,6 +97,9 @@ GEM
       activesupport
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
+    chromedriver-helper (1.2.0)
+      archive-zip (~> 0.10)
+      nokogiri (~> 1.8)
     concurrent-ruby (1.0.5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
@@ -141,6 +148,7 @@ GEM
       sass-rails
     i18n (1.1.1)
       concurrent-ruby (~> 1.0)
+    io-like (0.3.0)
     jmespath (1.3.1)
     jsonapi-renderer (0.2.0)
     kaminari (1.1.1)
@@ -191,6 +199,7 @@ GEM
       minitest-rails (~> 3.0)
     mocha (1.7.0)
       metaclass (~> 0.0.1)
+    msgpack (1.2.4)
     nio4r (2.3.1)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
@@ -309,8 +318,10 @@ DEPENDENCIES
   attr_encrypted (~> 3.1)!
   aws-sdk (~> 2.10)
   bullet (~> 5.7.6)
+  bootsnap (>= 1.1.0)
   byebug
   capybara (~> 2.18)
+  chromedriver-helper
   daredevil (~> 0.0.2)
   delayed_job_active_record (~> 4.1.3)
   devise (~> 4.5.0)
