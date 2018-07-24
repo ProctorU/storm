@@ -31,7 +31,7 @@ group :test do
   gem 'minitest-ci'
   gem 'mocha', '~> 1.7'
   gem 'minitest-rails-capybara'
-  gem 'mocha', '~> 1.4'
+  gem 'mocha', '~> 1.6'
   gem 'selenium-webdriver'
   gem 'vcr', '~> 4.0'
   gem 'webmock', '~> 3.4'
