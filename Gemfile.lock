@@ -74,6 +74,9 @@ GEM
       popper_js (>= 1.12.9, < 2)
       sass (>= 3.5.2)
     builder (3.2.3)
+    bullet (5.7.6)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11.0)
     byebug (10.0.2)
     capybara (2.18.0)
       addressable
@@ -267,6 +270,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.18)
       execjs (>= 0.3.0, < 3)
+    uniform_notifier (1.11.0)
     vcr (4.0.0)
     warden (1.2.7)
       rack (>= 1.0)
@@ -296,6 +300,7 @@ DEPENDENCIES
   active_model_serializers (~> 0.10.0)
   attr_encrypted (~> 3.1)!
   aws-sdk (~> 2.10)
+  bullet (~> 5.7.6)
   byebug
   capybara (~> 2.18)
   daredevil (~> 0.0.2)
