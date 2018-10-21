@@ -1,20 +1,12 @@
 <div class="page-header">
   <h4 class="page-title"><%= t(".title", website_name: @website.name) %></h4>
   <h5 class="page-subtitle"><%= t(".subtitle") %></h5>
-</div>
 
-<div class="row">
-  <div class="col-sm-4 offset-sm-4">
-    <%= link_to(website_path(@website),
-      class: "card card-link mb-3") do %>
-      <div class="card-body text-muted text-center d-flex align-items-center justify-content-center">
-        <i class="mr-3" data-feather="arrow-left"></i>
-        <h6 class="mb-0"><%= @website.name %></h6>
-      </div>
-    <% end %>
+  <div class="page-actions">
+    <%= link_to(t('.back', website_name: @website.name), website_path(@website),
+      class: "btn btn-secondary btn-sm") %>
   </div>
 </div>
-
 <div class="row">
   <div class="col-md-6 offset-md-3">
     <div class="card card-body mb-3">
