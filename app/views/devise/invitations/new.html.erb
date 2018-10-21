@@ -1,17 +1,9 @@
 <div class="page-header">
   <h4 class="page-title"><%= t(".title") %></h4>
   <h5 class="page-subtitle"><%= t(".subtitle") %></h5>
-</div>
 
-<div class="row">
-  <div class="col-sm-4 offset-sm-4">
-    <%= link_to(users_path,
-      class: "card card-link mb-3") do %>
-      <div class="card-body text-muted text-center d-flex align-items-center justify-content-center">
-        <i class="mr-3" data-feather="arrow-left"></i>
-        <h6 class="mb-0"><%= t('.head_back') %></h6>
-      </div>
-    <% end %>
+  <div class="page-actions">
+    <%= link_to(t('.head_back'), users_path, class: "btn btn-secondary btn-sm") %>
   </div>
 </div>
 

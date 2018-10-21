@@ -133,6 +133,7 @@ en:
     edit:
       subtitle: Let's edit your website
       title: Edit %{website_name}
+      back: Back to %{website_name}
     form:
       aws_info: AWS Information
       aws_instance_id: AWS Instance ID
