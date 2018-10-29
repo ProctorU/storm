@@ -31,7 +31,6 @@ group :test do
   gem 'minitest-ci'
   gem 'mocha', '~> 1.7'
   gem 'minitest-rails-capybara'
-  gem 'mocha', '~> 1.6'
   gem 'selenium-webdriver'
   gem 'vcr', '~> 4.0'
   gem 'webmock', '~> 3.4'
@@ -39,7 +38,6 @@ end
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capybara', '~> 2.18'
   gem 'factory_bot_rails', '~> 4.11.1'
   gem 'faker', '~> 1.9'
 end

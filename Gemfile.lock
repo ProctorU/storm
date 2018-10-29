@@ -317,8 +317,8 @@ DEPENDENCIES
   active_model_serializers (~> 0.10.0)
   attr_encrypted (~> 3.1)!
   aws-sdk (~> 2.10)
-  bullet (~> 5.7.6)
   bootsnap (>= 1.1.0)
+  bullet (~> 5.7.6)
   byebug
   capybara (~> 2.18)
   chromedriver-helper
@@ -355,4 +355,4 @@ DEPENDENCIES
   webpacker (~> 3.5)
 
 BUNDLED WITH
-   1.16.2
+   1.16.4
