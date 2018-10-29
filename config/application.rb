@@ -9,13 +9,13 @@ Bundler.require(*Rails.groups)
 module Storm
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.1
+    config.load_defaults 5.2
 
     config.assets.initialize_on_precompile = false
 
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
+    # Application configuration can go into files in config/initializers
+    # -- all .rb files in that directory are automatically loaded after loading
+    # the framework and any gems in your application.
 
     # Remove rails class added to error fields.
     config.action_view.field_error_proc = Proc.new do |html_tag, _instance|
@@ -31,6 +31,14 @@ module Storm
         origins '*'
         resource '*', headers: :any, methods: [:get]
       end
+    end
+
+    # This is necessary so Rails doesn't throw an
+    # 'uninitialized constant Minitest::Rails::TestUnit' error on tests
+    #
+    # More info: https://github.com/rails/rails/issues/31324
+    if Rails.env.test? && ActionPack::VERSION::STRING >= '5.2.0'
+      Minitest::Rails::TestUnit = Rails::TestUnit
     end
   end
 end
