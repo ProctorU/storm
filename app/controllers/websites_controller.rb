@@ -5,7 +5,7 @@ class WebsitesController < ApplicationController
   before_action(:set_website, only: %w(show edit update destroy))
 
   def index
-    @websites = Website.includes(:recent_pings).active.paginate(params).decorate
+    @websites = Website.active.paginate(params).decorate
 
     respond_to do |format|
       format.html
