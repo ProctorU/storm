@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+if ENV['RUBY_VERSION']
+  ruby(ENV['RUBY_VERSION'])
+end
+
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'active_model_serializers', '~> 0.10.0'
