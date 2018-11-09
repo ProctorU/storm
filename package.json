@@ -1,6 +1,9 @@
 {
   "name": "storm",
   "private": true,
+  "engines": {
+    "node": "10.6.0"
+  },
   "dependencies": {
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
