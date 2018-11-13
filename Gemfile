@@ -47,7 +47,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'bullet', '~> 5.8.1'
+  gem 'bullet', '~> 5.9.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'ruby-progressbar', '~> 1.10'
   gem 'spring'
