@@ -6,7 +6,7 @@ end
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'active_model_serializers', '~> 0.10.0'
+gem 'active_model_serializers', '~> 0.10.8'
 gem 'attr_encrypted', '~> 3.1', github: 'attr-encrypted/attr_encrypted'
 gem 'aws-sdk', '~> 2.10'
 gem 'bootsnap', '>= 1.1.0', require: false
