@@ -12,6 +12,13 @@ class Ping < ApplicationRecord
 
   after_create(:send_to_ping_notifier, unless: :skip_callbacks)
 
+  def self.without_outliers
+    average = average(:response_time).to_f
+    max = average * 3
+
+    where.not('response_time > ?', max)
+  end
+
   private
 
   def send_to_ping_notifier

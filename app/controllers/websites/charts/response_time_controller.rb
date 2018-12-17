@@ -6,7 +6,9 @@ module Websites
         respond_to do |format|
           format.html
           format.json do
-            @data = ::Charts::ResponseTime.new(@website.daily_pings).aggregate
+            @data = ::Charts::ResponseTime.new(
+              @website.daily_pings.without_outliers
+            ).aggregate
             render json: @data
           end
         end
