@@ -33,7 +33,7 @@ group :test do
   gem 'capybara', '~> 2.18'
   gem 'chromedriver-helper'
   gem 'minitest-ci'
-  gem 'mocha', '~> 1.7'
+  gem 'mocha', '~> 1.8'
   gem 'minitest-rails-capybara'
   gem 'selenium-webdriver'
   gem 'vcr', '~> 4.0'
