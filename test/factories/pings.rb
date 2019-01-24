@@ -5,11 +5,11 @@ FactoryBot.define do
     skip_callbacks { true }
 
     trait(:success) do
-      status(1)
+      status { 1 }
     end
 
     trait(:fail) do
-      status(0)
+      status { 0 }
     end
   end
 end
