@@ -14,6 +14,7 @@ module Notifiers
       def notify!
         return unless enabled?
         notifier.ping(message, icon_url: icon_url)
+        secondary_notifier.ping(message, icon_url: icon_url) if secondary_slack_url.present?
       end
 
       private
@@ -26,8 +27,16 @@ module Notifiers
         @slack_url ||= Setting.global.slack_url
       end
 
+      def secondary_slack_url
+        @secondary_slack_url ||= Setting.global.secondary_slack_url
+      end
+
       def notifier
         Slack::Notifier.new(slack_url, username: bot_username)
+      end
+
+      def secondary_notifier
+        Slack::Notifier.new(secondary_slack_url, username: bot_username)
       end
 
       def icon_url

@@ -12,6 +12,18 @@
     </p>
   </div>
 
+  <div class="form-group">
+    <%= f.label :secondary_slack_url, t('.labels.secondary_slack_url') %>
+    <%= f.text_field :secondary_slack_url, class: "form-control" %>
+    <%= error_message_on(f.object, :secondary_slack_url) %>
+
+    <p class="form-text text-muted">
+      <small>
+        <%= t('.secondary_slack_instructions') %>
+      </small>
+    </p>
+  </div>
+
   <div class="hr-sect"><%= t('.aws_section') %></div>
 
   <small class="d-block mb-3 text-muted"><%= t('.aws_info') %></small>

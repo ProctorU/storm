@@ -19,7 +19,9 @@ class SettingsController < ApplicationController
   private
 
   def setting_params
-    params.require(:setting).permit(:aws_key, :aws_secret, :slack_url)
+    params.require(:setting).permit(
+      :aws_key, :aws_secret, :slack_url, :secondary_slack_url
+    )
   end
 
   def create_settings

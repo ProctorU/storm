@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180713023802) do
+ActiveRecord::Schema.define(version: 2019_01_24_043444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20180713023802) do
     t.string "encrypted_aws_secret_iv"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "secondary_slack_url"
   end
 
   create_table "tokens", force: :cascade do |t|

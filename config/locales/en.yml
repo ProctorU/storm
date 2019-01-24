@@ -66,10 +66,13 @@ en:
       slack_action: here
       slack_instructions: >
         Instructions for finding your Slack URL can be found
+      secondary_slack_instructions: >
+        You can add a second Slack URL to notify an additional Slack channel. This is optional.
       labels:
         aws_key: AWS Key
         aws_secret: AWS Secret
         slack_url: Slack URL for notifications
+        secondary_slack_url: Additional Slack URL
     update:
       success: Your settings have been successfully updated.
   shared:
