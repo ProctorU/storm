@@ -5,7 +5,7 @@ class WebsitesController < ApplicationController
   before_action(:set_website, only: %w(show edit update destroy))
 
   def index
-    @websites = Website.active.paginate(params).decorate
+    @websites = Website.paginate(params).decorate
 
     respond_to do |format|
       format.html
@@ -58,7 +58,7 @@ class WebsitesController < ApplicationController
   def website_params
     params.require(:website).permit(
       :name, :url, :basic_auth_username, :basic_auth_password,
-      :aws_instance_id, :aws_region
+      :active, :aws_instance_id, :aws_region
     )
   end
 end

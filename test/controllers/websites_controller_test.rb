@@ -34,6 +34,15 @@ class WebsitesControllerTest < ActionDispatch::IntegrationTest
       end
     end
 
+    test 'should patch update and set website inactive' do
+      assert_no_difference('Website.count') do
+        patch(website_path(@website), params: inactive_params)
+        assert_not_nil(flash[:success])
+        assert_redirected_to(root_path)
+        assert_not @website.reload.active?
+      end
+    end
+
     test 'should post create' do
       assert_difference('Website.count') do
         post(websites_path, params: params)
@@ -102,5 +111,9 @@ class WebsitesControllerTest < ActionDispatch::IntegrationTest
         ssl: false
       }
     }
+  end
+
+  def inactive_params
+    { website: params[:website].merge({ active: 0 }) }
   end
 end

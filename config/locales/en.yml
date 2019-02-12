@@ -141,6 +141,7 @@ en:
       aws_region_select: Select a region
       optional: Optional
       url: URL
+      active: Active
     index:
       add: Add website
       resource: website
