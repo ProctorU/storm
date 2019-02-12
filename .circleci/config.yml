@@ -6,12 +6,12 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/ruby:2.4.1-node-browsers
+      - image: circleci/ruby:2.5.3-node-browsers
         environment:
           PGHOST: 127.0.0.1
           PGUSER: storm
           RAILS_ENV: test
-      - image: circleci/postgres:9.4
+      - image: circleci/postgres:9.6
         environment:
           POSTGRES_USER: storm
           POSTGRES_DB: storm_test
