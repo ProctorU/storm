@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddDeletedAtToTables < ActiveRecord::Migration[5.1]
   def up
     add_column(:users, :deleted_at, :datetime)

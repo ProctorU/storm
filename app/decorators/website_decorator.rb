@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # WebsiteDecorator
 class WebsiteDecorator < Draper::Decorator
   delegate_all

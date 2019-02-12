@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # PaginatingDecorator
 class PaginatingDecorator < Draper::CollectionDecorator
   delegate(

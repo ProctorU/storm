@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # TokensController
 #
 # The TokensController handles four RESTful actions.

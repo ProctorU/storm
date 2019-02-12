@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # ApplicationDecorator
 #
 # The ApplicationDecorator is designed to be the parent class for all

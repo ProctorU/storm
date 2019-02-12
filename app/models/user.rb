@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   devise(
     :invitable, :database_authenticatable, :registerable,

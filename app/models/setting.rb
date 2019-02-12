@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Setting < ApplicationRecord
   attr_encrypted(
     :aws_key,

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # PingDecorator
 class PingDecorator < ApplicationDecorator
   def successful?

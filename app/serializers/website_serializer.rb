@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class WebsiteSerializer < ActiveModel::Serializer
   attributes(:id, :name, :url)
 

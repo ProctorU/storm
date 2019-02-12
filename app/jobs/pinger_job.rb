@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # PingerJob
 class PingerJob < ApplicationJob
   queue_as(:default)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # TranslationsHelper
 module TranslationsHelper
   def i18n_phrases
