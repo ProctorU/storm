@@ -2,7 +2,7 @@ require 'test_helper'
 
 class TokenTest < ActiveSupport::TestCase
   setup do
-    @token = build(:token)
+    @token = build(:token, created_by: create(:user))
   end
 
   test 'valid' do
