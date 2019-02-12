@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # SettingsCreator
 class SettingsCreator
   def self.execute

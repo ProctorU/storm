@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Websites
   # BaseController
   class BaseController < ApplicationController

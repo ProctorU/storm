@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # UserDecorator
 class UserDecorator < ApplicationDecorator
   def member_status_text

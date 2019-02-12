@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # WebsitesController
 class WebsitesController < ApplicationController
   include PaginatableConcern

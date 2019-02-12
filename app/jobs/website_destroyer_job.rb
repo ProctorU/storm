@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class WebsiteDestroyerJob < ActiveJob::Base
   queue_as(:default)
 

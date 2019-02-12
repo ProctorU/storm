@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RemoveDeletedAtFromTables < ActiveRecord::Migration[5.1]
   def up
     destroy_deleted_users

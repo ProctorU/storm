@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # InitialAccountSetup
 class InitialAccountSetup
   attr_reader(:current_user, :current_path)

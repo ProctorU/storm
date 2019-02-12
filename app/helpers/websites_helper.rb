@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module WebsitesHelper
   def options_for_aws_region(selected = nil)
     options_for_select(aws_regions, selected)

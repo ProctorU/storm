@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   def body_classes
     user_signed_in? ? 'logged-in' : 'logged-out'

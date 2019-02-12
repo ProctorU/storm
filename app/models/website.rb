@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Website
 class Website < ApplicationRecord
   include Paginatable

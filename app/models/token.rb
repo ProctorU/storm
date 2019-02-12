@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Token
 #
 # A Token represents the authentication for the API.
