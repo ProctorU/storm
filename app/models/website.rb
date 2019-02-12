@@ -44,7 +44,7 @@ class Website < ApplicationRecord
     if active?
       create_ping
     else
-      job.destroy
+      job.destroy if job.present?
     end
   end
 end
