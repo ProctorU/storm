@@ -15,7 +15,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'daredevil', '~> 0.0.2'
 gem 'delayed_job_active_record', '~> 4.1.3'
 gem 'devise', '~> 4.6.1'
-gem 'devise_invitable', '~> 1.7'
+gem 'devise_invitable', '~> 2.0'
 gem 'draper', '~> 3.1'
 gem 'foreman'
 gem 'hootstrap', '~> 0.11.0'
