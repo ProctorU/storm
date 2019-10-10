@@ -14,7 +14,7 @@ gem 'aws-sdk', '~> 2.10'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'daredevil', '~> 0.0.2'
 gem 'delayed_job_active_record', '~> 4.1.3'
-gem 'devise', '~> 4.6.2'
+gem 'devise', '~> 4.7.1'
 gem 'devise_invitable', '~> 2.0'
 gem 'draper', '~> 3.1'
 gem 'foreman'
