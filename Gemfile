@@ -12,6 +12,7 @@ gem 'active_model_serializers', '~> 0.10.9'
 gem 'attr_encrypted', '~> 3.1', github: 'attr-encrypted/attr_encrypted'
 gem 'aws-sdk', '~> 2.10'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'daemons', '~> 1.3'
 gem 'daredevil', '~> 0.0.2'
 gem 'delayed_job_active_record', '~> 4.1.3'
 gem 'devise', '~> 4.6.2'
