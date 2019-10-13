@@ -35,7 +35,7 @@ module Pings
       ping.update_columns(ping_attributes(website.url))
       return enqueue_next_ping(ping) if successful?(ping.reload)
 
-      ping.update_column(:retry_count, ping.retry_count + 1)
+      ping.update_column(:retry_count, (ping.retry_count || 0) + 1)
       PingerJob.set(wait: 10.seconds).perform_later(website, true)
       ping
     end
