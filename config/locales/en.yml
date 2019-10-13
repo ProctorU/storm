@@ -70,6 +70,7 @@ en:
         aws_key: AWS Key
         aws_secret: AWS Secret
         slack_url: Slack URL for notifications
+        email_address: Email address for notifications
     update:
       success: Your settings have been successfully updated.
   shared:
@@ -219,3 +220,6 @@ en:
       destroy_link: Delete user
       invitation_link: Invitation Link
       reset_password: Reset password
+  notifiers:
+    mailer_service:
+      subject: Storm Notification

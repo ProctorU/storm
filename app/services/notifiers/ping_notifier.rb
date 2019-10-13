@@ -13,6 +13,7 @@ module Notifiers
     def notify!
       return unless can_notify?
       Notifiers::Services::SlackService.new(message).notify!
+      Notifiers::Services::MailerService.new(message).notify!
     end
 
     private
