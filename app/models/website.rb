@@ -7,7 +7,7 @@ class Website < ApplicationRecord
   VALID_URL_REGEX = /\A#{URI::regexp(['http', 'https'])}\z/
 
   has_many :pings, dependent: :delete_all
-  has_many :recent_pings, -> { limit(5) }, class_name: 'Ping'
+  has_many :recent_pings, -> { order(created_at: :desc).limit(5) }, class_name: 'Ping'
   has_many :daily_pings, -> { limit(1_440) }, class_name: 'Ping'
 
   # Only query the max number from pagination.
