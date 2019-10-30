@@ -10,8 +10,6 @@ class Ping < ApplicationRecord
   validates(:status, presence: true)
   validates(:response_time, presence: true)
 
-  default_scope { order(created_at: :desc) }
-
   after_create(:send_to_ping_notifier, unless: :skip_callbacks)
 
   def self.without_outliers

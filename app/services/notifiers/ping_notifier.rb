@@ -35,11 +35,11 @@ module Notifiers
     end
 
     def first_ping
-      @first_ping ||= previous_ping.nil?
+      previous_ping.nil?
     end
 
     def previous_ping
-      website.pings.second
+      @previous_ping ||= website.pings.order(created_at: :desc).second
     end
 
     def message
