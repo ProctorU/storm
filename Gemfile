@@ -39,7 +39,7 @@ group :test do
   gem 'minitest-rails-capybara'
   gem 'selenium-webdriver'
   gem 'vcr', '~> 5.0'
-  gem 'webmock', '~> 3.7'
+  gem 'webmock', '~> 3.13'
 end
 
 group :development, :test do
